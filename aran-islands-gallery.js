@@ -1,0 +1,2 @@
+const aranIslandsGalleryImages = ["aran-IMG_4517.jpeg", "aran-IMG_4521.jpeg", "aran-IMG_4536.jpeg", "aran-IMG_4543.jpeg", "aran-IMG_4544.jpeg", "aran-IMG_4547.jpeg", "aran-IMG_4548.jpeg", "aran-IMG_4552.jpeg", "aran-IMG_4557.jpeg", "aran-IMG_4563.jpeg", "aran-IMG_4564.jpeg", "aran-IMG_4582.jpeg", "aran-IMG_4594.jpeg", "aran-IMG_4605.jpeg", "aran-IMG_4606.jpeg"];
+window.aranIslandsGalleryImages = aranIslandsGalleryImages;

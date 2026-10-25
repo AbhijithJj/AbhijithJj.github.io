@@ -1,0 +1,2 @@
+const sligoGalleryImages = ["sligo-1bd1b457-e3e6-49f4-a1f4-a0d342645882.JPG", "sligo-IMG_0734.jpeg", "sligo-IMG_0740.jpeg", "sligo-IMG_0796.jpeg", "sligo-IMG_0829.jpeg", "sligo-IMG_0835.jpeg", "sligo-IMG_4105.jpeg", "sligo-IMG_4123.jpeg", "sligo-IMG_4140.jpeg", "sligo-IMG_4661.jpeg", "sligo-IMG_4708.jpeg", "sligo-IMG_4732.jpeg", "sligo-IMG_4767.jpeg", "sligo-IMG_5294.jpeg", "sligo-IMG_5312.jpeg", "sligo-IMG_5317.jpeg", "sligo-IMG_5342.jpeg", "sligo-IMG_8887.jpeg", "sligo-IMG_8891.jpeg", "sligo-IMG_8953.jpeg"];
+window.sligoGalleryImages = sligoGalleryImages;

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kildare | Abhijith</title>
+    <meta name="description" content="A gallery of Kildare, Ireland travel memories and photos." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css?v=20261024-sahara" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container nav-bar">
+        <a href="index.html" class="brand">Just a guy who took <em>Into the Wild</em> too seriously !!</a>
+        <nav class="nav-links" aria-label="Main navigation">
+          <a href="index.html#stories">Stories</a>
+          <a href="index.html#destinations">Destinations</a>
+          <a href="index.html#about">About</a>
+          <a href="index.html#newsletter">Newsletter</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="container" style="padding: 3rem 0 4rem;">
+      <a href="ireland.html" class="county-back-link">&larr; Back to the Ireland map</a>
+
+      <section class="morocco-gallery-page">
+        <div class="morocco-gallery-copy">
+          <p class="eyebrow">County Kildare</p>
+          <h1>Village lanes, sweet treats, and fairy lights at dusk.</h1>
+          <p>Kildare was a slow wander through pretty shopping lanes, past quirky sculptures and colourful shopfronts, with a crêpe in hand, until the trees lit up with fairy lights as the evening rolled in.</p>
+          <p class="morocco-quote">Come for the shops, stay for the glow when the lights come on.</p>
+        </div>
+        <div id="kildareGalleryGrid" class="morocco-gallery-grid" aria-label="Kildare photo gallery"></div>
+      </section>
+    </main>
+
+    <script src="kildare-gallery.js"></script>
+    <script>
+      const galleryGrid = document.getElementById('kildareGalleryGrid');
+
+      if (galleryGrid && window.kildareGalleryImages) {
+        window.kildareGalleryImages.forEach((fileName) => {
+          const link = document.createElement('a');
+          link.className = 'gallery-thumb';
+          link.href = `images/${fileName}`;
+          link.target = '_blank';
+          link.rel = 'noopener';
+          link.innerHTML = `<img src="images/${fileName}" alt="Kildare photo ${fileName}" loading="lazy" />`;
+          galleryGrid.appendChild(link);
+        });
+      }
+    </script>
+  </body>
+</html>

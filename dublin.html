@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dublin | Abhijith</title>
+    <meta name="description" content="A gallery of Dublin, Ireland travel memories and photos." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css?v=20261024-sahara" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container nav-bar">
+        <a href="index.html" class="brand">Just a guy who took <em>Into the Wild</em> too seriously !!</a>
+        <nav class="nav-links" aria-label="Main navigation">
+          <a href="index.html#stories">Stories</a>
+          <a href="index.html#destinations">Destinations</a>
+          <a href="index.html#about">About</a>
+          <a href="index.html#newsletter">Newsletter</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="container" style="padding: 3rem 0 4rem;">
+      <a href="ireland.html" class="county-back-link">&larr; Back to the Ireland map</a>
+
+      <section class="morocco-gallery-page">
+        <div class="morocco-gallery-copy">
+          <p class="eyebrow">County Dublin</p>
+          <h1>Cherry blossoms, park deer, and nights in Temple Bar.</h1>
+          <p>Dublin is where everyday life happens — blossom-lined walks in spring, deer grazing in the park, golden sunsets over the rooftops, and lively nights out in the city.</p>
+          <p class="morocco-quote">Not just a city I visited, but one I get to call home.</p>
+        </div>
+        <div id="dublinGalleryGrid" class="morocco-gallery-grid" aria-label="Dublin photo gallery"></div>
+      </section>
+    </main>
+
+    <script src="dublin-gallery.js"></script>
+    <script>
+      const galleryGrid = document.getElementById('dublinGalleryGrid');
+
+      if (galleryGrid && window.dublinGalleryImages) {
+        window.dublinGalleryImages.forEach((fileName) => {
+          const link = document.createElement('a');
+          link.className = 'gallery-thumb';
+          link.href = `images/${fileName}`;
+          link.target = '_blank';
+          link.rel = 'noopener';
+          link.innerHTML = `<img src="images/${fileName}" alt="Dublin photo ${fileName}" loading="lazy" />`;
+          galleryGrid.appendChild(link);
+        });
+      }
+    </script>
+  </body>
+</html>

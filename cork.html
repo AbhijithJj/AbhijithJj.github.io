@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cork | Abhijith</title>
+    <meta name="description" content="A gallery of Cork, Ireland travel memories and photos." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css?v=20261024-sahara" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container nav-bar">
+        <a href="index.html" class="brand">Just a guy who took <em>Into the Wild</em> too seriously !!</a>
+        <nav class="nav-links" aria-label="Main navigation">
+          <a href="index.html#stories">Stories</a>
+          <a href="index.html#destinations">Destinations</a>
+          <a href="index.html#about">About</a>
+          <a href="index.html#newsletter">Newsletter</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="container" style="padding: 3rem 0 4rem;">
+      <a href="ireland.html" class="county-back-link">&larr; Back to the Ireland map</a>
+
+      <section class="morocco-gallery-page">
+        <div class="morocco-gallery-copy">
+          <p class="eyebrow">County Cork</p>
+          <h1>Rainbow rows, river streets, and a spire over the harbour.</h1>
+          <p>Cork was busy city streets and street art along the river, then a trip out to the coast where rows of pastel houses climb the hill beneath a towering cathedral.</p>
+          <p class="morocco-quote">Grey skies or blue, the colours of Cork never fade.</p>
+        </div>
+        <div id="corkGalleryGrid" class="morocco-gallery-grid" aria-label="Cork photo gallery"></div>
+      </section>
+    </main>
+
+    <script src="cork-gallery.js"></script>
+    <script>
+      const galleryGrid = document.getElementById('corkGalleryGrid');
+
+      if (galleryGrid && window.corkGalleryImages) {
+        window.corkGalleryImages.forEach((fileName) => {
+          const link = document.createElement('a');
+          link.className = 'gallery-thumb';
+          link.href = `images/${fileName}`;
+          link.target = '_blank';
+          link.rel = 'noopener';
+          link.innerHTML = `<img src="images/${fileName}" alt="Cork photo ${fileName}" loading="lazy" />`;
+          galleryGrid.appendChild(link);
+        });
+      }
+    </script>
+  </body>
+</html>

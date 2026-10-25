@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Italy | Abhijith</title>
+    <meta name="description" content="A gallery of Italy travel memories and photos." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css?v=20261024-sahara" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container nav-bar">
+        <a href="index.html" class="brand">Just a guy who took <em>Into the Wild</em> too seriously !!</a>
+        <nav class="nav-links" aria-label="Main navigation">
+          <a href="index.html#stories">Stories</a>
+          <a href="index.html#destinations">Destinations</a>
+          <a href="index.html#about">About</a>
+          <a href="index.html#newsletter">Newsletter</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="container" style="padding: 3rem 0 4rem;">
+      <section class="morocco-gallery-page">
+        <div class="morocco-gallery-copy">
+          <p class="eyebrow">Italy memories</p>
+          <h1>Sun-warmed piazzas, ancient stone, and coastlines that beg to be photographed.</h1>
+          <p>Italy moved between grand cities and quiet coastal towns, each stop layered with history, food, and light that never seemed to fade.</p>
+          <p class="morocco-quote">A country of espresso mornings, winding alleys, and views that stop you mid-walk.</p>
+        </div>
+        <div id="italyGalleryGrid" class="morocco-gallery-grid" aria-label="Italy photo gallery"></div>
+      </section>
+
+      <section class="route-map-section">
+        <div class="route-map-copy">
+          <p class="eyebrow">The route</p>
+          <h2>South to north, four stops along the way</h2>
+          <p>Naples, Rome, Pisa, then Milan — a slow climb up the country, city by city.</p>
+        </div>
+        <svg class="route-map-svg" viewBox="0 0 320 420" role="img" aria-label="Map of the route from Naples to Rome to Pisa to Milan">
+          <text x="300" y="30" text-anchor="end" class="route-map-compass">N ↑</text>
+          <path class="route-map-line" d="M50,380 Q130,340 130,290 Q40,230 70,170 Q150,130 150,50" />
+
+          <g class="route-map-stop">
+            <circle cx="50" cy="380" r="10" />
+            <text x="50" y="384" text-anchor="middle" class="route-map-number">1</text>
+            <text x="70" y="378" class="route-map-city">Naples</text>
+            <text x="70" y="396" class="route-map-caption">Where the trip began, by the bay</text>
+          </g>
+
+          <g class="route-map-stop">
+            <circle cx="130" cy="290" r="10" />
+            <text x="130" y="294" text-anchor="middle" class="route-map-number">2</text>
+            <text x="150" y="284" class="route-map-city">Rome</text>
+            <text x="150" y="302" class="route-map-caption">Ancient streets and eternal ruins</text>
+          </g>
+
+          <g class="route-map-stop">
+            <circle cx="70" cy="170" r="10" />
+            <text x="70" y="174" text-anchor="middle" class="route-map-number">3</text>
+            <text x="90" y="164" class="route-map-city">Pisa</text>
+            <text x="90" y="182" class="route-map-caption">A quick detour to see it lean</text>
+          </g>
+
+          <g class="route-map-stop">
+            <circle cx="150" cy="50" r="10" />
+            <text x="150" y="54" text-anchor="middle" class="route-map-number">4</text>
+            <text x="170" y="44" class="route-map-city">Milan</text>
+            <text x="170" y="62" class="route-map-caption">The finish line up north</text>
+          </g>
+        </svg>
+      </section>
+    </main>
+
+    <script src="italy-gallery.js"></script>
+    <script>
+      const galleryGrid = document.getElementById('italyGalleryGrid');
+
+      if (galleryGrid && window.italyGalleryImages) {
+        window.italyGalleryImages.forEach((fileName) => {
+          const link = document.createElement('a');
+          link.className = 'gallery-thumb';
+          link.href = `images/${fileName}`;
+          link.target = '_blank';
+          link.rel = 'noopener';
+          link.innerHTML = `<img src="images/${fileName}" alt="Italy photo ${fileName}" loading="lazy" />`;
+          galleryGrid.appendChild(link);
+        });
+      }
+    </script>
+  </body>
+</html>

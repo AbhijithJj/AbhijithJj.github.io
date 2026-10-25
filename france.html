@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>France | Abhijith</title>
+    <meta name="description" content="A gallery of France travel memories and photos." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css?v=20261024-sahara" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container nav-bar">
+        <a href="index.html" class="brand">Just a guy who took <em>Into the Wild</em> too seriously !!</a>
+        <nav class="nav-links" aria-label="Main navigation">
+          <a href="index.html#stories">Stories</a>
+          <a href="index.html#destinations">Destinations</a>
+          <a href="index.html#about">About</a>
+          <a href="index.html#newsletter">Newsletter</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="container" style="padding: 3rem 0 4rem;">
+      <section class="morocco-gallery-page">
+        <div class="morocco-gallery-copy">
+          <p class="eyebrow">France memories</p>
+          <h1>Cobblestone lanes, café mornings, and light that lingers into evening.</h1>
+          <p>France felt like a slow unfolding — quiet villages, grand boulevards, and the kind of light that makes every photo look like a postcard.</p>
+          <p class="morocco-quote">A country of timeless streets, unhurried afternoons, and views worth pausing for.</p>
+        </div>
+        <div id="franceGalleryGrid" class="morocco-gallery-grid" aria-label="France photo gallery"></div>
+      </section>
+    </main>
+
+    <script src="france-gallery.js"></script>
+    <script>
+      const galleryGrid = document.getElementById('franceGalleryGrid');
+
+      if (galleryGrid && window.franceGalleryImages) {
+        window.franceGalleryImages.forEach((fileName) => {
+          const link = document.createElement('a');
+          link.className = 'gallery-thumb';
+          link.href = `images/${fileName}`;
+          link.target = '_blank';
+          link.rel = 'noopener';
+          link.innerHTML = `<img src="images/${fileName}" alt="France photo ${fileName}" loading="lazy" />`;
+          galleryGrid.appendChild(link);
+        });
+      }
+    </script>
+  </body>
+</html>

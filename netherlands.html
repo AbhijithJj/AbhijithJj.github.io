@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Netherlands | Abhijith</title>
+    <meta name="description" content="A gallery of Netherlands travel memories and photos." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css?v=20261024-sahara" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container nav-bar">
+        <a href="index.html" class="brand">Just a guy who took <em>Into the Wild</em> too seriously !!</a>
+        <nav class="nav-links" aria-label="Main navigation">
+          <a href="index.html#stories">Stories</a>
+          <a href="index.html#destinations">Destinations</a>
+          <a href="index.html#about">About</a>
+          <a href="index.html#newsletter">Newsletter</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="container" style="padding: 3rem 0 4rem;">
+      <section class="morocco-gallery-page">
+        <div class="morocco-gallery-copy">
+          <p class="eyebrow">Netherlands memories</p>
+          <h1>Canals, bicycles, and quiet streets that seem to float on water.</h1>
+          <p>The Netherlands felt unhurried — narrow canal houses, flat horizons, and cities built for wandering on foot or by bike.</p>
+          <p class="morocco-quote">A country of tidy charm, big skies, and golden hour light on the water.</p>
+        </div>
+        <div id="netherlandsGalleryGrid" class="morocco-gallery-grid" aria-label="Netherlands photo gallery"></div>
+      </section>
+    </main>
+
+    <script src="netherlands-gallery.js"></script>
+    <script>
+      const galleryGrid = document.getElementById('netherlandsGalleryGrid');
+
+      if (galleryGrid && window.netherlandsGalleryImages) {
+        window.netherlandsGalleryImages.forEach((fileName) => {
+          const link = document.createElement('a');
+          link.className = 'gallery-thumb';
+          link.href = `images/${fileName}`;
+          link.target = '_blank';
+          link.rel = 'noopener';
+          link.innerHTML = `<img src="images/${fileName}" alt="Netherlands photo ${fileName}" loading="lazy" />`;
+          galleryGrid.appendChild(link);
+        });
+      }
+    </script>
+  </body>
+</html>

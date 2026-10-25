@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ireland | Abhijith</title>
+    <meta name="description" content="An interactive county map of Ireland travel memories and photos." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css?v=20261024-sahara" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container nav-bar">
+        <a href="index.html" class="brand">Just a guy who took <em>Into the Wild</em> too seriously !!</a>
+        <nav class="nav-links" aria-label="Main navigation">
+          <a href="index.html#stories">Stories</a>
+          <a href="index.html#destinations">Destinations</a>
+          <a href="index.html#about">About</a>
+          <a href="index.html#newsletter">Newsletter</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="container" style="padding: 1.25rem 0 2rem;">
+      <h1 class="county-map-title">Ireland Exploration</h1>
+
+      <section class="county-map-section">
+        <svg id="irelandMap" class="county-map-svg" viewBox="0 0 270 450" width="270" height="450" role="img" aria-label="Map of Ireland">
+          <rect class="county-map-sea" x="0" y="0" width="270" height="450" rx="18" />
+          <polygon class="county-map-outline" points="70,30 100,60 130,90 170,120 200,150 220,195 250,250 245,290 240,340 210,370 180,390 150,405 120,420 95,400 60,415 80,370 65,330 45,290 25,260 55,235 35,200 20,160 55,130 40,95 20,65" />
+          <g id="countyMarkers"></g>
+        </svg>
+      </section>
+    </main>
+
+    <script src="ireland-map.js?v=20261025-mayo"></script>
+    <script>
+      const markerGroup = document.getElementById('countyMarkers');
+      const svgNS = 'http://www.w3.org/2000/svg';
+
+      if (markerGroup && window.irelandPlaces) {
+        // Draw "coming soon" dots first so photo markers and their labels always sit on top.
+        const drawOrder = [...window.irelandPlaces].sort((a, b) => Number(a.hasGallery) - Number(b.hasGallery));
+        drawOrder.forEach((county, index) => {
+          if (county.hasGallery) {
+            const link = document.createElementNS(svgNS, 'a');
+            link.setAttribute('href', `${county.slug}.html`);
+            link.setAttribute('class', 'county-marker county-marker--active');
+
+            const clipId = `countyClip-${index}`;
+            const clipPath = document.createElementNS(svgNS, 'clipPath');
+            clipPath.setAttribute('id', clipId);
+            const clipCircle = document.createElementNS(svgNS, 'circle');
+            clipCircle.setAttribute('cx', county.x);
+            clipCircle.setAttribute('cy', county.y);
+            clipCircle.setAttribute('r', 20);
+            clipPath.appendChild(clipCircle);
+            markerGroup.appendChild(clipPath);
+
+            const image = document.createElementNS(svgNS, 'image');
+            image.setAttribute('href', `images/${county.thumb}`);
+            image.setAttribute('x', county.x - 20);
+            image.setAttribute('y', county.y - 20);
+            image.setAttribute('width', 40);
+            image.setAttribute('height', 40);
+            image.setAttribute('preserveAspectRatio', 'xMidYMid slice');
+            image.setAttribute('clip-path', `url(#${clipId})`);
+            link.appendChild(image);
+
+            const ring = document.createElementNS(svgNS, 'circle');
+            ring.setAttribute('cx', county.x);
+            ring.setAttribute('cy', county.y);
+            ring.setAttribute('r', 20);
+            ring.setAttribute('class', 'county-marker-ring');
+            link.appendChild(ring);
+
+            const label = document.createElementNS(svgNS, 'text');
+            label.setAttribute('x', county.x);
+            label.setAttribute('y', county.y + 36);
+            label.setAttribute('text-anchor', 'middle');
+            label.setAttribute('class', 'county-marker-label');
+            label.textContent = county.name;
+            link.appendChild(label);
+
+            markerGroup.appendChild(link);
+          } else {
+            const group = document.createElementNS(svgNS, 'g');
+            group.setAttribute('class', 'county-marker county-marker--pending');
+
+            const title = document.createElementNS(svgNS, 'title');
+            title.textContent = `${county.name} — coming soon`;
+            group.appendChild(title);
+
+            const dot = document.createElementNS(svgNS, 'circle');
+            dot.setAttribute('cx', county.x);
+            dot.setAttribute('cy', county.y);
+            dot.setAttribute('r', 8);
+            dot.setAttribute('class', 'county-marker-dot');
+            group.appendChild(dot);
+
+            markerGroup.appendChild(group);
+          }
+        });
+      }
+    </script>
+  </body>
+</html>

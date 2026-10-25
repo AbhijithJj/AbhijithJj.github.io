@@ -1,0 +1,2 @@
+const vaticanGalleryImages = ["vatican-WhatsApp Image 2025-09-27 at 10.11.09_09111020.jpg", "vatican-PXL_20241209_101847285.jpg", "vatican-PXL_20241207_160346931.jpg", "vatican-PXL_20241207_162311900.MP~2.jpg", "vatican-PXL_20241207_160742386~2.jpg", "vatican-PXL_20241207_180407608.MP.jpg", "vatican-PXL_20241207_123652061.jpg", "vatican-PXL_20241207_154942392.MP.jpg", "vatican-PXL_20241207_171619649.jpg", "vatican-PXL_20241207_165915185.MP.jpg", "vatican-PXL_20241207_160108354.jpg", "vatican-PXL_20241207_160809118.jpg"];
+window.vaticanGalleryImages = vaticanGalleryImages;
