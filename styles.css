@@ -1549,6 +1549,13 @@ html.intro-playing {
   background: linear-gradient(90deg, rgba(245, 165, 36, 0.55), transparent);
 }
 
-#destinations .home-divider {
-  margin-bottom: 2rem;
+.home-intro--stories {
+  padding-top: 0;
+}
+
+.home-intro-sub {
+  font-size: clamp(1.3rem, 2vw, 1.7rem);
+  font-weight: 600;
+  color: var(--text);
+  margin: 0;
 }
