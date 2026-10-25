@@ -1245,3 +1245,310 @@ h2 {
     gap: 0.5rem;
   }
 }
+
+/* ---------- Door intro (homepage) ----------
+   Carved jali doors. Timeline: scene fades in -> sunlight brightens through the lattice
+   -> right door cracks open with a sun flare -> both doors swing inward
+   -> camera flies through the light -> site revealed. */
+html.intro-playing {
+  overflow: hidden;
+}
+
+.door-intro {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+  cursor: pointer;
+  background: radial-gradient(ellipse at 50% 50%, #2a170c 0%, #0b1328 80%);
+  animation: doorIntroOut 1.3s ease-in 5.6s forwards;
+}
+
+/* Warm white flash as we pass through the doorway */
+.door-intro::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: radial-gradient(circle at 50% 50%, #fff8e6 0%, #ffe2a8 40%, rgba(245, 165, 36, 0.6) 100%);
+  opacity: 0;
+  animation: doorFlash 1.2s ease-in 4.9s forwards;
+}
+
+.door-intro--skip {
+  animation: doorIntroOut 0.35s ease forwards;
+}
+
+/* The whole carved wall; children are positioned in its 900 x 960 artwork grid */
+.door-scene {
+  position: relative;
+  width: min(96vw, 86vh * 0.9375);
+  aspect-ratio: 900 / 960;
+  transform-origin: 50% 57%;
+  -webkit-mask-image: radial-gradient(ellipse 72% 70% at 50% 50%, #000 62%, transparent 100%);
+  mask-image: radial-gradient(ellipse 72% 70% at 50% 50%, #000 62%, transparent 100%);
+  animation:
+    doorSceneIn 1.4s cubic-bezier(0.2, 0.7, 0.2, 1) both,
+    doorSceneZoom 1.8s cubic-bezier(0.7, 0, 0.84, 0) 4.6s forwards;
+}
+
+.door-art {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+/* Door opening: x 270-630, y 230-880 of the artwork */
+.door-outside,
+.door-opening {
+  position: absolute;
+  left: 30%;
+  top: 23.958%;
+  width: 40%;
+  height: 67.708%;
+}
+
+.door-outside {
+  overflow: hidden;
+  background:
+    radial-gradient(circle at 62% 22%, #fffdf2 0 8%, rgba(255, 244, 214, 0.9) 16%, transparent 42%),
+    radial-gradient(ellipse 45% 30% at 12% 46%, #6f8f45, transparent 70%),
+    radial-gradient(ellipse 40% 28% at 90% 52%, #5f7f3c, transparent 70%),
+    radial-gradient(ellipse 30% 10% at 50% 66%, #8aa35a, transparent 70%),
+    linear-gradient(180deg, #fff1cf 0%, #f8dfa6 50%, #d9c29a 68%, #f1dcb5 100%);
+}
+
+/* Sunlit stone path leading away */
+.door-outside::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, #e6cfa4, #fff3dc);
+  clip-path: polygon(42% 68%, 58% 68%, 100% 100%, 0 100%);
+}
+
+.door-opening {
+  perspective: 1100px;
+}
+
+.door {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: calc(50% - 1px); /* leaves a hairline of light between the doors */
+  filter: drop-shadow(0 0 6px rgba(0, 0, 0, 0.4));
+}
+
+.door svg {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.door--left {
+  left: 0;
+  transform-origin: left center;
+  animation: doorOpenLeft 2.1s cubic-bezier(0.6, 0, 0.2, 1) 3.8s forwards;
+}
+
+.door--right {
+  right: 0;
+  transform-origin: right center;
+  animation:
+    doorCrack 0.85s cubic-bezier(0.3, 0, 0.3, 1) 2.9s forwards,
+    doorOpenRight 2.1s cubic-bezier(0.6, 0, 0.2, 1) 3.8s forwards;
+}
+
+.door-ring {
+  position: absolute;
+  top: 53%;
+  width: 11%;
+  aspect-ratio: 1;
+  border: 3px solid #e2b25a;
+  border-radius: 50%;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5), inset 0 1px 1px rgba(255, 240, 200, 0.6);
+}
+
+.door--left .door-ring {
+  right: 5%;
+}
+
+.door--right .door-ring {
+  left: 5%;
+}
+
+.door-glow {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: radial-gradient(circle at 50% 45%, #fffaf0 0%, rgba(255, 226, 168, 0.85) 45%, transparent 85%);
+  opacity: 0;
+  animation: doorFadeIn 1.6s ease-out 4.3s forwards;
+}
+
+/* Light pooling on the floor tiles in front of the threshold */
+.door-spill {
+  position: absolute;
+  left: 18%;
+  width: 64%;
+  top: 91.5%;
+  height: 8.5%;
+  pointer-events: none;
+  background: linear-gradient(180deg, rgba(255, 228, 165, 0.85), rgba(255, 210, 122, 0));
+  clip-path: polygon(22% 0, 78% 0, 100% 100%, 0 100%);
+  opacity: 0;
+  animation: doorFadeIn 1.8s ease-out 3.4s forwards;
+}
+
+/* Soft god rays across the room once the doors open */
+.door-rays {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  mix-blend-mode: screen;
+  background: repeating-linear-gradient(100deg, transparent 0 22px, rgba(255, 214, 140, 0.12) 22px 46px);
+  -webkit-mask-image: radial-gradient(ellipse 55% 60% at 50% 55%, #000 30%, transparent 100%);
+  mask-image: radial-gradient(ellipse 55% 60% at 50% 55%, #000 30%, transparent 100%);
+  opacity: 0;
+  animation: doorFadeIn 1.8s ease-out 3.6s forwards;
+}
+
+/* Sun flare bursting through the gap, like light through the jali */
+.door-sun {
+  position: absolute;
+  left: 50%;
+  top: 40%;
+  width: 90%;
+  aspect-ratio: 1;
+  pointer-events: none;
+  mix-blend-mode: screen;
+  background:
+    radial-gradient(circle, #fff 0 2.5%, rgba(255, 244, 214, 0.9) 5%, rgba(255, 210, 130, 0.35) 16%, transparent 40%),
+    repeating-conic-gradient(rgba(255, 235, 190, 0.35) 0 2deg, transparent 2deg 12deg);
+  -webkit-mask-image: radial-gradient(circle, #000 8%, transparent 50%);
+  mask-image: radial-gradient(circle, #000 8%, transparent 50%);
+  opacity: 0;
+  transform: translate(-50%, -50%) scale(0.3);
+  animation: doorSun 2.6s ease-out 2.9s forwards;
+}
+
+/* Starts dim and brightens like the sun coming up behind the doors */
+.door-dim {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: rgba(12, 6, 2, 0.6);
+  animation: doorDim 2s ease-in-out 0.6s forwards;
+}
+
+.door-skip {
+  position: absolute;
+  bottom: 1.5rem;
+  right: 1.5rem;
+  font-size: 0.75rem;
+  color: var(--muted);
+  opacity: 0.6;
+}
+
+@keyframes doorSceneIn {
+  from { opacity: 0; transform: scale(0.94) translateY(12px); }
+  to { opacity: 1; transform: none; }
+}
+
+@keyframes doorSceneZoom {
+  to { transform: scale(5); }
+}
+
+@keyframes doorCrack {
+  to { transform: rotateY(-18deg); }
+}
+
+@keyframes doorOpenRight {
+  from { transform: rotateY(-18deg); }
+  to { transform: rotateY(-110deg); }
+}
+
+@keyframes doorOpenLeft {
+  to { transform: rotateY(110deg); }
+}
+
+@keyframes doorFadeIn {
+  to { opacity: 1; }
+}
+
+@keyframes doorSun {
+  to { opacity: 1; transform: translate(-50%, -50%) scale(1) rotate(20deg); }
+}
+
+@keyframes doorDim {
+  to { opacity: 0; }
+}
+
+@keyframes doorFlash {
+  60% { opacity: 1; }
+  100% { opacity: 1; }
+}
+
+@keyframes doorIntroOut {
+  to { opacity: 0; visibility: hidden; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .door-intro {
+    display: none;
+  }
+}
+
+/* ---------- Homepage intro: headline + featured stories heading ---------- */
+.home-intro {
+  text-align: center;
+  padding-top: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.home-intro h1 {
+  font-size: clamp(2.1rem, 4.4vw, 3.6rem);
+  letter-spacing: -0.01em;
+  margin-bottom: 2.25rem;
+}
+
+.home-intro-accent {
+  background: linear-gradient(90deg, var(--accent-bright), var(--accent-soft));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+/* Thin rule either side of a small uppercase label */
+.home-divider {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  max-width: 520px;
+  margin: 0 auto 0.75rem;
+  color: var(--accent-bright);
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+}
+
+.home-divider::before,
+.home-divider::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(245, 165, 36, 0.55));
+}
+
+.home-divider::after {
+  background: linear-gradient(90deg, rgba(245, 165, 36, 0.55), transparent);
+}
+
+#destinations .home-divider {
+  margin-bottom: 2rem;
+}

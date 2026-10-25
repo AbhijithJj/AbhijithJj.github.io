@@ -14,15 +14,191 @@
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="styles.css?v=20261024-sahara" />
+    <link rel="stylesheet" href="styles.css?v=20261025-jali" />
   </head>
   <body>
+    <!-- Door intro: plays once per visit, click or press any key to skip. -->
+    <div class="door-intro" id="doorIntro" aria-hidden="true">
+      <div class="door-scene">
+        <!-- Static carved wall: side jali screens, carved frame, arched transom, threshold -->
+        <svg class="door-art" viewBox="0 0 900 960" preserveAspectRatio="none">
+          <defs>
+            <linearGradient id="dWood" x1="0" x2="1">
+              <stop offset="0" stop-color="#5a2a0e" />
+              <stop offset="0.5" stop-color="#94501f" />
+              <stop offset="1" stop-color="#5a2a0e" />
+            </linearGradient>
+            <linearGradient id="dWoodV" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0" stop-color="#8a4519" />
+              <stop offset="1" stop-color="#5e2c0e" />
+            </linearGradient>
+            <linearGradient id="dWall" x1="0" x2="1">
+              <stop offset="0" stop-color="#1e0e05" />
+              <stop offset="0.5" stop-color="#3e1d0b" />
+              <stop offset="1" stop-color="#1e0e05" />
+            </linearGradient>
+            <radialGradient id="dGlow" cx="0.5" cy="0.6" r="0.7">
+              <stop offset="0" stop-color="#fffbe8" />
+              <stop offset="0.5" stop-color="#ffdf9a" />
+              <stop offset="1" stop-color="#f0a040" />
+            </radialGradient>
+            <pattern id="dJali" width="22" height="22" patternUnits="userSpaceOnUse">
+              <g fill="none" stroke="#5a2a0e" stroke-width="2.6">
+                <circle cx="11" cy="11" r="10" />
+                <circle cx="0" cy="0" r="10" />
+                <circle cx="22" cy="0" r="10" />
+                <circle cx="0" cy="22" r="10" />
+                <circle cx="22" cy="22" r="10" />
+              </g>
+            </pattern>
+            <pattern id="dBars" width="16" height="64" patternUnits="userSpaceOnUse">
+              <rect x="5" width="6" height="64" fill="#6a3312" />
+              <ellipse cx="8" cy="32" rx="5" ry="9" fill="#6a3312" />
+              <rect width="16" height="5" fill="#5a2a0e" />
+            </pattern>
+            <pattern id="dCarve" width="14" height="14" patternUnits="userSpaceOnUse">
+              <path d="M0 7 7 0 14 7 7 14Z" fill="none" stroke="#3a1806" stroke-width="1.4" />
+              <circle cx="7" cy="7" r="1.8" fill="#3a1806" />
+            </pattern>
+            <pattern id="dTile" width="60" height="30" patternUnits="userSpaceOnUse">
+              <rect width="60" height="30" fill="#2a160a" />
+              <path d="M0 15 30 0 60 15 30 30Z" fill="none" stroke="#5b3518" stroke-width="1.5" />
+              <circle cx="30" cy="15" r="3" fill="#7a4a22" />
+            </pattern>
+            <symbol id="dRosette" viewBox="-50 -50 100 100">
+              <g fill="#4a2209" stroke="#2e1204" stroke-width="1.5">
+                <circle r="44" fill="none" />
+                <ellipse rx="9" ry="22" cy="-18" />
+                <ellipse rx="9" ry="22" cy="-18" transform="rotate(45)" />
+                <ellipse rx="9" ry="22" cy="-18" transform="rotate(90)" />
+                <ellipse rx="9" ry="22" cy="-18" transform="rotate(135)" />
+                <ellipse rx="9" ry="22" cy="-18" transform="rotate(180)" />
+                <ellipse rx="9" ry="22" cy="-18" transform="rotate(225)" />
+                <ellipse rx="9" ry="22" cy="-18" transform="rotate(270)" />
+                <ellipse rx="9" ry="22" cy="-18" transform="rotate(315)" />
+                <circle r="9" fill="#8a4a1c" />
+              </g>
+            </symbol>
+            <!-- One door leaf: lattice arch window, carved band, louvre, two rosette panels -->
+            <symbol id="dLeaf" viewBox="0 0 180 650" preserveAspectRatio="none">
+              <rect width="180" height="650" fill="url(#dWood)" />
+              <rect x="5" y="5" width="170" height="640" fill="none" stroke="#2e1204" stroke-width="3" />
+              <rect x="11" y="11" width="158" height="628" fill="none" stroke="#c98545" stroke-opacity="0.45" />
+              <path d="M28 300V135C28 88 58 56 90 36 122 56 152 88 152 135V300Z" fill="url(#dGlow)" />
+              <path d="M28 300V135C28 88 58 56 90 36 122 56 152 88 152 135V300Z" fill="url(#dJali)" />
+              <path d="M28 300V135C28 88 58 56 90 36 122 56 152 88 152 135V300Z" fill="none" stroke="#2e1204" stroke-width="7" />
+              <rect x="22" y="318" width="136" height="40" fill="url(#dCarve)" stroke="#2e1204" stroke-width="3" />
+              <rect x="22" y="370" width="136" height="24" fill="#6a3312" stroke="#2e1204" stroke-width="2" />
+              <path d="M26 378H154M26 386H154" stroke="#2e1204" stroke-width="2" />
+              <rect x="22" y="406" width="136" height="104" rx="3" fill="#5c2a0e" stroke="#2e1204" stroke-width="3" />
+              <rect x="30" y="414" width="120" height="88" fill="url(#dCarve)" opacity="0.55" />
+              <use href="#dRosette" x="52" y="420" width="76" height="76" />
+              <rect x="22" y="524" width="136" height="104" rx="3" fill="#5c2a0e" stroke="#2e1204" stroke-width="3" />
+              <rect x="30" y="532" width="120" height="88" fill="url(#dCarve)" opacity="0.55" />
+              <use href="#dRosette" x="52" y="538" width="76" height="76" />
+            </symbol>
+            <!-- Tall side screen: lattice crest, baluster grid, carved panel -->
+            <symbol id="dSide" viewBox="0 0 170 840">
+              <rect width="170" height="840" fill="url(#dWoodV)" stroke="#2e1204" stroke-width="4" />
+              <path d="M16 150V80C16 40 50 22 85 16 120 22 154 40 154 80V150Z" fill="url(#dGlow)" />
+              <path d="M16 150V80C16 40 50 22 85 16 120 22 154 40 154 80V150Z" fill="url(#dJali)" />
+              <path d="M16 150V80C16 40 50 22 85 16 120 22 154 40 154 80V150Z" fill="none" stroke="#2e1204" stroke-width="6" />
+              <rect x="16" y="162" width="138" height="26" fill="url(#dGlow)" />
+              <rect x="16" y="162" width="138" height="26" fill="url(#dBars)" stroke="#2e1204" stroke-width="3" />
+              <rect x="16" y="200" width="138" height="420" fill="url(#dGlow)" />
+              <rect x="16" y="200" width="138" height="420" fill="url(#dBars)" />
+              <path d="M16 270H154M16 340H154M16 410H154M16 480H154M16 550H154" stroke="#5a2a0e" stroke-width="8" />
+              <rect x="16" y="200" width="138" height="420" fill="none" stroke="#2e1204" stroke-width="5" />
+              <rect x="16" y="636" width="138" height="36" fill="url(#dCarve)" stroke="#2e1204" stroke-width="3" />
+              <rect x="16" y="686" width="138" height="136" rx="3" fill="#5c2a0e" stroke="#2e1204" stroke-width="3" />
+              <use href="#dRosette" x="40" y="709" width="90" height="90" />
+            </symbol>
+          </defs>
+
+          <rect width="900" height="960" fill="url(#dWall)" />
+          <use href="#dSide" x="30" y="56" width="170" height="840" />
+          <use href="#dSide" x="700" y="56" width="170" height="840" />
+
+          <rect x="226" y="46" width="448" height="856" fill="url(#dWoodV)" stroke="#2e1204" stroke-width="4" />
+          <rect x="234" y="54" width="432" height="840" fill="url(#dCarve)" />
+          <rect x="256" y="76" width="388" height="818" fill="#2e1204" />
+
+          <rect x="256" y="76" width="388" height="154" fill="url(#dWood)" />
+          <g>
+            <path d="M290 222V166C290 140 312 124 335 116 358 124 380 140 380 166V222Z" fill="url(#dGlow)" />
+            <path d="M290 222V166C290 140 312 124 335 116 358 124 380 140 380 166V222Z" fill="url(#dJali)" />
+            <path d="M290 222V166C290 140 312 124 335 116 358 124 380 140 380 166V222Z" fill="none" stroke="#2e1204" stroke-width="6" />
+            <path d="M394 222V150C394 116 422 98 450 88 478 98 506 116 506 150V222Z" fill="url(#dGlow)" />
+            <path d="M394 222V150C394 116 422 98 450 88 478 98 506 116 506 150V222Z" fill="url(#dJali)" />
+            <path d="M394 222V150C394 116 422 98 450 88 478 98 506 116 506 150V222Z" fill="none" stroke="#2e1204" stroke-width="6" />
+            <path d="M520 222V166C520 140 542 124 565 116 588 124 610 140 610 166V222Z" fill="url(#dGlow)" />
+            <path d="M520 222V166C520 140 542 124 565 116 588 124 610 140 610 166V222Z" fill="url(#dJali)" />
+            <path d="M520 222V166C520 140 542 124 565 116 588 124 610 140 610 166V222Z" fill="none" stroke="#2e1204" stroke-width="6" />
+          </g>
+          <rect x="256" y="230" width="14" height="650" fill="url(#dWoodV)" />
+          <rect x="630" y="230" width="14" height="650" fill="url(#dWoodV)" />
+
+          <rect x="214" y="880" width="472" height="22" fill="#a87447" stroke="#2e1204" stroke-width="2" />
+          <rect y="902" width="900" height="58" fill="url(#dTile)" />
+        </svg>
+
+        <!-- Sunlit garden beyond the doors -->
+        <div class="door-outside"></div>
+
+        <div class="door-opening">
+          <div class="door door--left">
+            <svg viewBox="0 0 180 650" preserveAspectRatio="none"><use href="#dLeaf" /></svg>
+            <span class="door-ring"></span>
+          </div>
+          <div class="door door--right">
+            <svg viewBox="0 0 180 650" preserveAspectRatio="none"><use href="#dLeaf" /></svg>
+            <span class="door-ring"></span>
+          </div>
+          <div class="door-glow"></div>
+        </div>
+
+        <div class="door-spill"></div>
+        <div class="door-rays"></div>
+        <div class="door-sun"></div>
+        <div class="door-dim"></div>
+      </div>
+      <span class="door-skip">Click anywhere to skip</span>
+    </div>
+    <script>
+      (() => {
+        const intro = document.getElementById('doorIntro');
+        let seen = false;
+        try {
+          seen = sessionStorage.getItem('doorIntroSeen') === '1';
+          sessionStorage.setItem('doorIntroSeen', '1');
+        } catch (e) {}
+        const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+        const finish = () => {
+          intro.remove();
+          document.documentElement.classList.remove('intro-playing');
+        };
+
+        if (seen || reduceMotion) {
+          finish();
+          return;
+        }
+
+        document.documentElement.classList.add('intro-playing');
+        intro.addEventListener('animationend', (event) => {
+          if (event.target === intro) finish();
+        });
+        const skip = () => intro.classList.add('door-intro--skip');
+        intro.addEventListener('click', skip);
+        document.addEventListener('keydown', skip, { once: true });
+      })();
+    </script>
+
     <header class="site-header">
       <div class="container nav-bar">
         <a href="#top" class="brand">Just a guy who took <em>Into the Wild</em> too seriously !!</a>
         <nav class="nav-links" aria-label="Main navigation">
-          <a href="#destinations">Destinations</a>
           <a href="#stories">Stories</a>
+          <a href="#destinations">Destinations</a>
           <a href="#about">About</a>
           <a href="#newsletter">Newsletter</a>
           <a href="https://www.instagram.com/abhijit_jj/" target="_blank" rel="noopener noreferrer" class="nav-instagram">📷 abhijit_jj</a>
@@ -31,12 +207,59 @@
     </header>
 
     <main id="top">
+      <section id="stories" class="section">
+        <div class="container">
+          <div class="home-intro">
+            <p class="eyebrow">Passport stamps &amp; stories</p>
+            <h1>Ten countries. <span class="home-intro-accent">Countless stories.</span></h1>
+          </div>
+
+          <div class="card-grid">
+            <a href="germany-story.html" class="story-card story-card--link">
+              <img
+                src="images/germany-1.jpeg"
+                alt="Mountain landscape in the Bavarian Alps"
+              />
+              <div class="card-content">
+                <span class="card-country">Germany</span>
+                <h3>My Exploration Through the Bavarian Alps</h3>
+                <p>High ridges, pine forests, and the quiet thrill of discovering Bavaria at its most breathtaking.</p>
+                <span class="card-cta">Read the story &rarr;</span>
+              </div>
+            </a>
+
+            <a href="turkey-story.html" class="story-card story-card--link">
+              <img
+                src="images/turkey-story.jpeg"
+                alt="A beautiful Turkey landscape and travel scene"
+              />
+              <div class="card-content">
+                <span class="card-country">Turkey</span>
+                <h3>Exploring the Beauty of My Trip</h3>
+                <p>From winding streets to bright skies, this Turkey journey felt full of color, calm, and discovery.</p>
+                <span class="card-cta">Read the story &rarr;</span>
+              </div>
+            </a>
+
+            <a href="morocco-story.html" class="story-card story-card--link">
+              <img
+                src="images/morocco-4.jpeg"
+                alt="Colorful streets and buildings in a historic city"
+              />
+              <div class="card-content">
+                <span class="card-country">Morocco</span>
+                <h3>Finding Color in Marrakech</h3>
+                <p>Markets, mosaics, and the warmth of Marrakech that made every street feel full of life.</p>
+                <span class="card-cta">Read the story &rarr;</span>
+              </div>
+            </a>
+          </div>
+        </div>
+      </section>
+
       <section id="destinations" class="country-hero">
         <div class="container">
-          <div class="country-hero-heading">
-            <p class="eyebrow">Passport stamps &amp; stories</p>
-            <h1>Ten countries. Countless stories.</h1>
-          </div>
+          <p class="home-divider"><span>Destinations</span></p>
 
           <div class="country-grid">
             <a href="ireland.html" class="country-tile">
@@ -89,56 +312,6 @@
               <img src="images/morocco-destination.jpg" alt="Morocco" />
               <span class="country-tile-name">Morocco</span>
               <span class="country-tile-cta">View photos &rarr;</span>
-            </a>
-          </div>
-        </div>
-      </section>
-
-      <section id="stories" class="section">
-        <div class="container">
-          <div class="section-heading">
-            <p class="eyebrow">Featured stories</p>
-            <h2>Where the road leads next</h2>
-          </div>
-
-          <div class="card-grid">
-            <a href="germany-story.html" class="story-card story-card--link">
-              <img
-                src="images/germany-1.jpeg"
-                alt="Mountain landscape in the Bavarian Alps"
-              />
-              <div class="card-content">
-                <span class="card-country">Germany</span>
-                <h3>My Exploration Through the Bavarian Alps</h3>
-                <p>High ridges, pine forests, and the quiet thrill of discovering Bavaria at its most breathtaking.</p>
-                <span class="card-cta">Read the story &rarr;</span>
-              </div>
-            </a>
-
-            <a href="turkey-story.html" class="story-card story-card--link">
-              <img
-                src="images/turkey-story.jpeg"
-                alt="A beautiful Turkey landscape and travel scene"
-              />
-              <div class="card-content">
-                <span class="card-country">Turkey</span>
-                <h3>Exploring the Beauty of My Trip</h3>
-                <p>From winding streets to bright skies, this Turkey journey felt full of color, calm, and discovery.</p>
-                <span class="card-cta">Read the story &rarr;</span>
-              </div>
-            </a>
-
-            <a href="morocco-story.html" class="story-card story-card--link">
-              <img
-                src="images/morocco-4.jpeg"
-                alt="Colorful streets and buildings in a historic city"
-              />
-              <div class="card-content">
-                <span class="card-country">Morocco</span>
-                <h3>Finding Color in Marrakech</h3>
-                <p>Markets, mosaics, and the warmth of Marrakech that made every street feel full of life.</p>
-                <span class="card-cta">Read the story &rarr;</span>
-              </div>
             </a>
           </div>
         </div>
