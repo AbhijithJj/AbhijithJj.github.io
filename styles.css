@@ -1263,7 +1263,7 @@ html.intro-playing {
   overflow: hidden;
   cursor: pointer;
   background: radial-gradient(ellipse at 50% 50%, #2a170c 0%, #0b1328 80%);
-  animation: doorIntroOut 1.3s ease-in 5.6s forwards;
+  animation: doorIntroOut 0.9s ease-in 3.7s forwards;
 }
 
 /* Warm white flash as we pass through the doorway */
@@ -1274,7 +1274,7 @@ html.intro-playing {
   pointer-events: none;
   background: radial-gradient(circle at 50% 50%, #fff8e6 0%, #ffe2a8 40%, rgba(245, 165, 36, 0.6) 100%);
   opacity: 0;
-  animation: doorFlash 1.2s ease-in 4.9s forwards;
+  animation: doorFlash 0.8s ease-in 3.2s forwards;
 }
 
 .door-intro--skip {
@@ -1290,8 +1290,8 @@ html.intro-playing {
   -webkit-mask-image: radial-gradient(ellipse 72% 70% at 50% 50%, #000 62%, transparent 100%);
   mask-image: radial-gradient(ellipse 72% 70% at 50% 50%, #000 62%, transparent 100%);
   animation:
-    doorSceneIn 1.4s cubic-bezier(0.2, 0.7, 0.2, 1) both,
-    doorSceneZoom 1.8s cubic-bezier(0.7, 0, 0.84, 0) 4.6s forwards;
+    doorSceneIn 0.9s cubic-bezier(0.2, 0.7, 0.2, 1) both,
+    doorSceneZoom 1.2s cubic-bezier(0.7, 0, 0.84, 0) 3s forwards;
 }
 
 .door-art {
@@ -1352,15 +1352,15 @@ html.intro-playing {
 .door--left {
   left: 0;
   transform-origin: left center;
-  animation: doorOpenLeft 2.1s cubic-bezier(0.6, 0, 0.2, 1) 3.8s forwards;
+  animation: doorOpenLeft 1.4s cubic-bezier(0.6, 0, 0.2, 1) 2.4s forwards;
 }
 
 .door--right {
   right: 0;
   transform-origin: right center;
   animation:
-    doorCrack 0.85s cubic-bezier(0.3, 0, 0.3, 1) 2.9s forwards,
-    doorOpenRight 2.1s cubic-bezier(0.6, 0, 0.2, 1) 3.8s forwards;
+    doorCrack 0.55s cubic-bezier(0.3, 0, 0.3, 1) 1.8s forwards,
+    doorOpenRight 1.4s cubic-bezier(0.6, 0, 0.2, 1) 2.4s forwards;
 }
 
 .door-ring {
@@ -1387,7 +1387,7 @@ html.intro-playing {
   pointer-events: none;
   background: radial-gradient(circle at 50% 45%, #fffaf0 0%, rgba(255, 226, 168, 0.85) 45%, transparent 85%);
   opacity: 0;
-  animation: doorFadeIn 1.6s ease-out 4.3s forwards;
+  animation: doorFadeIn 1s ease-out 2.8s forwards;
 }
 
 /* Light pooling on the floor tiles in front of the threshold */
@@ -1401,7 +1401,7 @@ html.intro-playing {
   background: linear-gradient(180deg, rgba(255, 228, 165, 0.85), rgba(255, 210, 122, 0));
   clip-path: polygon(22% 0, 78% 0, 100% 100%, 0 100%);
   opacity: 0;
-  animation: doorFadeIn 1.8s ease-out 3.4s forwards;
+  animation: doorFadeIn 1.2s ease-out 2.2s forwards;
 }
 
 /* Soft god rays across the room once the doors open */
@@ -1414,7 +1414,7 @@ html.intro-playing {
   -webkit-mask-image: radial-gradient(ellipse 55% 60% at 50% 55%, #000 30%, transparent 100%);
   mask-image: radial-gradient(ellipse 55% 60% at 50% 55%, #000 30%, transparent 100%);
   opacity: 0;
-  animation: doorFadeIn 1.8s ease-out 3.6s forwards;
+  animation: doorFadeIn 1.2s ease-out 2.3s forwards;
 }
 
 /* Sun flare bursting through the gap, like light through the jali */
@@ -1433,7 +1433,7 @@ html.intro-playing {
   mask-image: radial-gradient(circle, #000 8%, transparent 50%);
   opacity: 0;
   transform: translate(-50%, -50%) scale(0.3);
-  animation: doorSun 2.6s ease-out 2.9s forwards;
+  animation: doorSun 1.7s ease-out 1.8s forwards;
 }
 
 /* Starts dim and brightens like the sun coming up behind the doors */
@@ -1442,7 +1442,7 @@ html.intro-playing {
   inset: 0;
   pointer-events: none;
   background: rgba(12, 6, 2, 0.6);
-  animation: doorDim 2s ease-in-out 0.6s forwards;
+  animation: doorDim 1.3s ease-in-out 0.4s forwards;
 }
 
 .door-skip {
