@@ -8,7 +8,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="styles.css?v=20261027-turkey" />
+    <link rel="stylesheet" href="styles.css?v=20261027-memories" />
   </head>
   <body>
     <header class="site-header">
@@ -24,84 +24,73 @@
     </header>
 
     <main class="container" style="padding: 3rem 0 4rem;">
-      <section class="morocco-gallery-page">
-        <div class="morocco-gallery-copy">
-          <p class="eyebrow">Turkey memories</p>
-          <h1>Winding streets, bright skies, and color at every turn.</h1>
-          <p>Turkey moved between old and new in a single step — bustling bazaars, quiet mosques, and coastlines that felt like they belonged to another era.</p>
-          <p class="morocco-quote">A country of layered history, warm hospitality, and skylines that catch fire at sunset.</p>
+      <!-- One panel: intro + route map on the left, photo mosaic on the right -->
+      <section class="memories">
+        <div class="memories-intro">
+          <p class="eyebrow">Turkey &middot; the outtakes</p>
+          <h1>Shots that missed the story.</h1>
+          <p>Too good to leave in the camera roll.</p>
+
+          <svg class="route-map-svg memories-map" viewBox="0 0 320 420" role="img" aria-label="Map of the route from Istanbul to Cappadocia to Antalya">
+            <text x="300" y="30" text-anchor="end" class="route-map-compass">N ↑</text>
+            <path class="route-map-line" d="M60,50 Q180,90 230,220 Q170,320 110,380" />
+
+            <g class="route-map-stop">
+              <circle cx="60" cy="50" r="10" />
+              <text x="60" y="54" text-anchor="middle" class="route-map-number">1</text>
+              <text x="80" y="44" class="route-map-city">Istanbul</text>
+              <text x="80" y="62" class="route-map-caption">Touchdown</text>
+            </g>
+
+            <g class="route-map-stop">
+              <circle cx="230" cy="220" r="10" />
+              <text x="230" y="224" text-anchor="middle" class="route-map-number">2</text>
+              <text x="210" y="214" text-anchor="end" class="route-map-city">Cappadocia</text>
+              <text x="210" y="232" text-anchor="end" class="route-map-caption">Chimneys &amp; balloons</text>
+            </g>
+
+            <g class="route-map-stop">
+              <circle cx="110" cy="380" r="10" />
+              <text x="110" y="384" text-anchor="middle" class="route-map-number">3</text>
+              <text x="130" y="374" class="route-map-city">Antalya</text>
+              <text x="130" y="392" class="route-map-caption">Into the blue</text>
+            </g>
+          </svg>
+
+          <a href="turkey-journey.html" class="social-link">Read the full story &rarr;</a>
         </div>
-        <div id="turkeyGalleryGrid" class="morocco-gallery-grid" aria-label="Turkey photo gallery"></div>
-      </section>
 
-      <section class="route-map-section">
-        <div class="route-map-copy">
-          <p class="eyebrow">The route</p>
-          <h2>Three stops across the country</h2>
-          <p>Istanbul, then Cappadocia, then down to Antalya on the coast.</p>
+        <div class="memories-mosaic" aria-label="Turkey photos">
+          <a class="memory-tile memory-tile--big" href="images/turkey-1000179142.JPG" target="_blank" rel="noopener">
+            <img src="images/turkey-1000179142.JPG" alt="Watching hot air balloons rise over the Cappadocia valley" loading="lazy" />
+            <span class="memory-caption">Sky full of balloons</span>
+          </a>
+          <a class="memory-tile" href="images/turkey-1000180201.JPG" target="_blank" rel="noopener">
+            <img src="images/turkey-1000180201.JPG" alt="Göreme lit up at night" loading="lazy" />
+            <span class="memory-caption">Göreme after dark</span>
+          </a>
+          <a class="memory-tile memory-tile--tall" href="images/turkey-1000178223.JPG" target="_blank" rel="noopener">
+            <img src="images/turkey-1000178223.JPG" alt="A glowing golden tunnel carved into the rock" loading="lazy" />
+            <span class="memory-caption">Golden tunnels</span>
+          </a>
+          <a class="memory-tile" href="images/turkey-1000178222.JPG" target="_blank" rel="noopener">
+            <img src="images/turkey-1000178222.JPG" alt="A cave corridor lined with painted plates" loading="lazy" />
+            <span class="memory-caption">Plate-lined halls</span>
+          </a>
+          <a class="memory-tile memory-tile--wide" href="images/turkey-1000180246.JPG" target="_blank" rel="noopener">
+            <img src="images/turkey-1000180246.JPG" alt="Cappadocia at dusk with the town lights coming on" loading="lazy" />
+            <span class="memory-caption">Last light, Cappadocia</span>
+          </a>
+          <a class="memory-tile" href="images/turkey-1000178149.JPG" target="_blank" rel="noopener">
+            <img src="images/turkey-1000178149.JPG" alt="A Turkish breakfast spread on a table" loading="lazy" />
+            <span class="memory-caption">Breakfast, Turkish-style</span>
+          </a>
+          <a class="memory-tile" href="images/turkey-1000178500.JPG" target="_blank" rel="noopener">
+            <img src="images/turkey-1000178500.JPG" alt="A souvenir shop full of evil-eye charms and ceramics" loading="lazy" />
+            <span class="memory-caption">Evil eyes everywhere</span>
+          </a>
         </div>
-        <svg class="route-map-svg" viewBox="0 0 320 420" role="img" aria-label="Map of the route from Istanbul to Cappadocia to Antalya">
-          <text x="300" y="30" text-anchor="end" class="route-map-compass">N ↑</text>
-          <path class="route-map-line" d="M60,50 Q180,90 230,220 Q170,320 110,380" />
-
-          <g class="route-map-stop">
-            <circle cx="60" cy="50" r="10" />
-            <text x="60" y="54" text-anchor="middle" class="route-map-number">1</text>
-            <text x="80" y="44" class="route-map-city">Istanbul</text>
-            <text x="80" y="62" class="route-map-caption">Where two continents meet</text>
-          </g>
-
-          <g class="route-map-stop">
-            <circle cx="230" cy="220" r="10" />
-            <text x="230" y="224" text-anchor="middle" class="route-map-number">2</text>
-            <text x="210" y="214" text-anchor="end" class="route-map-city">Cappadocia</text>
-            <text x="210" y="232" text-anchor="end" class="route-map-caption">Balloons over fairy chimneys</text>
-          </g>
-
-          <g class="route-map-stop">
-            <circle cx="110" cy="380" r="10" />
-            <text x="110" y="384" text-anchor="middle" class="route-map-number">3</text>
-            <text x="130" y="374" class="route-map-city">Antalya</text>
-            <text x="130" y="392" class="route-map-caption">Turquoise coast, journey's end</text>
-          </g>
-        </svg>
       </section>
     </main>
-
-    <script src="turkey-gallery.js"></script>
-    <script>
-      const galleryGrid = document.getElementById('turkeyGalleryGrid');
-
-      if (galleryGrid && window.turkeyGalleryImages) {
-        window.turkeyGalleryImages.forEach((fileName) => {
-          if (/\.mp4$/i.test(fileName)) {
-            const wrapper = document.createElement('div');
-            wrapper.className = 'gallery-thumb';
-            wrapper.innerHTML = `<video src="images/${fileName}" preload="metadata" playsinline></video>`;
-            const videoEl = wrapper.querySelector('video');
-            wrapper.addEventListener('click', async () => {
-              try {
-                await videoEl.play();
-                if (document.pictureInPictureElement !== videoEl) {
-                  await videoEl.requestPictureInPicture();
-                }
-              } catch (err) {
-                console.error('Picture-in-Picture failed:', err);
-              }
-            });
-            galleryGrid.appendChild(wrapper);
-            return;
-          }
-
-          const link = document.createElement('a');
-          link.className = 'gallery-thumb';
-          link.href = `images/${fileName}`;
-          link.target = '_blank';
-          link.rel = 'noopener';
-          link.innerHTML = `<img src="images/${fileName}" alt="Turkey photo ${fileName}" loading="lazy" />`;
-          galleryGrid.appendChild(link);
-        });
-      }
-    </script>
   </body>
 </html>
