@@ -55,7 +55,7 @@ img {
 
 .nav-bar {
   display: flex;
-  justify-content: flex-end;
+  justify-content: space-between;
   align-items: center;
   padding: 1rem 0;
 }
@@ -75,7 +75,7 @@ img {
 }
 
 .brand em {
-  margin: 0 0.3em;
+  margin-left: 0.25em;
   color: var(--accent-bright);
   font-weight: 700;
 }
@@ -1222,7 +1222,8 @@ h2 {
 
 @media (max-width: 640px) {
   .nav-bar {
-    justify-content: center;
+    flex-direction: column;
+    gap: 0.5rem;
   }
 
   .nav-links {
@@ -1569,4 +1570,32 @@ html.intro-playing {
   font-weight: 600;
   color: var(--text);
   margin: 0;
+}
+
+/* Four featured stories: four across on wide screens, two-by-two below that */
+#stories .card-grid {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+@media (max-width: 1100px) {
+  #stories .card-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 640px) {
+  #stories .card-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Story pages without a video use a photo in the hero frame */
+.story-video-frame img {
+  height: 100%;
+}
+
+/* Landscape hero photo (for stories whose cover shot is wide) */
+.story-video-frame--wide {
+  width: min(100%, 560px);
+  aspect-ratio: 4 / 3;
 }
