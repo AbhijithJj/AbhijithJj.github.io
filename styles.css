@@ -55,7 +55,7 @@ img {
 
 .nav-bar {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-end;
   align-items: center;
   padding: 1rem 0;
 }
@@ -1221,7 +1221,18 @@ h2 {
 }
 
 @media (max-width: 640px) {
+  .nav-bar {
+    justify-content: center;
+  }
+
   .nav-links {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.4rem 1rem;
+    font-size: 0.9rem;
+  }
+
+  .nav-links .nav-instagram {
     display: none;
   }
 
