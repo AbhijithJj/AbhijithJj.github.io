@@ -1599,3 +1599,9 @@ html.intro-playing {
   width: min(100%, 560px);
   aspect-ratio: 4 / 3;
 }
+
+/* Landscape hero video (e.g. the Turkey scuba clip) */
+.story-video-frame--landscape {
+  width: min(100%, 600px);
+  aspect-ratio: 816 / 464;
+}
