@@ -1637,6 +1637,10 @@ html.intro-playing {
   color: var(--muted);
 }
 
+.memories-intro .social-link {
+  margin-top: 1.25rem;
+}
+
 .memories-map {
   max-width: 230px;
   margin: 1.25rem 0;
@@ -1729,4 +1733,119 @@ html.intro-playing {
     grid-template-columns: repeat(2, minmax(0, 1fr));
     grid-auto-rows: 130px;
   }
+}
+
+/* Three-photo memories mosaic: one tall photo beside two stacked */
+.memories-map--wide {
+  max-width: 270px;
+}
+
+.memories-mosaic--trio {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-auto-rows: 320px;
+}
+
+@media (max-width: 560px) {
+  .memories-mosaic--trio {
+    grid-template-columns: 1fr;
+    grid-auto-rows: 260px;
+  }
+
+  .memories-mosaic--trio .memory-tile {
+    grid-row: auto;
+  }
+}
+
+/* Route map inside a story hero, with photo stops */
+.hero-map {
+  max-width: 400px;
+  margin: 0.25rem 0 1.2rem;
+}
+
+.route-map-stop .hero-map-ring {
+  fill: none;
+  stroke: var(--accent-bright);
+  stroke-width: 3;
+}
+
+.hero-map-emoji {
+  font-size: 17px;
+}
+
+.hero-map-leg {
+  fill: none;
+  stroke: var(--muted);
+  stroke-width: 2;
+  stroke-dasharray: 2 6;
+  stroke-linecap: round;
+  opacity: 0.7;
+}
+
+/* Journey route strip (story pages) */
+.journey-route {
+  list-style: none;
+  display: flex;
+  gap: 0;
+  margin: 0 0 2.5rem;
+  padding: 1.2rem 0.25rem 0.4rem;
+  overflow-x: auto;
+  scrollbar-width: thin;
+}
+
+.journey-route li {
+  position: relative;
+  flex: 1 1 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 0.2rem;
+  padding: 0 0.3rem;
+}
+
+.journey-route li::before {
+  content: "";
+  position: absolute;
+  top: 22px;
+  left: -50%;
+  width: 100%;
+  border-top: 2px dashed var(--accent-bright);
+  opacity: 0.55;
+  z-index: 0;
+}
+
+.journey-route li:first-child::before {
+  display: none;
+}
+
+.journey-icon {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  place-items: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: #0f1a33;
+  border: 2px solid var(--accent-bright);
+  font-size: 1.25rem;
+  margin-bottom: 0.35rem;
+  transition: transform 0.25s ease;
+}
+
+.journey-route li:hover .journey-icon {
+  transform: translateY(-3px) scale(1.08);
+}
+
+.journey-city {
+  font-weight: 700;
+  font-size: 0.88rem;
+  line-height: 1.25;
+  color: var(--text);
+}
+
+.journey-note {
+  font-size: 0.78rem;
+  font-style: italic;
+  color: var(--muted);
 }
