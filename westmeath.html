@@ -3,55 +3,105 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Westmeath | Abhijith JJ</title>
-    <meta name="description" content="A gallery of Westmeath, Ireland travel memories and photos." />
+    <title>Go-Karting in Westmeath | Abhijith JJ</title>
+    <meta name="description" content="A trip from Dublin to Westmeath for outdoor go-karting: breakfast first, kids who drove circles around us, and a new experience." />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="styles.css?v=20261027-germany" />
+    <script>document.documentElement.classList.add('js');</script>
   </head>
   <body>
     <header class="site-header">
       <div class="container nav-bar">
         <a href="index.html" class="brand">Passport stamps &amp; <em>stories</em></a>
         <nav class="nav-links" aria-label="Main navigation">
-          <a href="index.html#stories">Stories</a>
           <a href="index.html#destinations">Destinations</a>
+          <a href="index.html#stories">Stories</a>
           <a href="index.html#about">About</a>
           <a href="index.html#newsletter">Newsletter</a>
         </nav>
       </div>
     </header>
 
-    <main class="container" style="padding: 3rem 0 4rem;">
-      <a href="ireland.html" class="county-back-link">&larr; Back to the Ireland map</a>
+    <main>
+      <section class="story-hero">
+        <img class="story-hero-ambient" src="images/westmeath-IMG_3406.jpeg" alt="" aria-hidden="true" />
 
-      <section class="morocco-gallery-page">
-        <div class="morocco-gallery-copy">
-          <p class="eyebrow">County Westmeath</p>
-          <h1>Full throttle on the track, then a full Irish to finish.</h1>
-          <p>Westmeath was all about speed: strapping into a go-kart and racing around the track, before refuelling with a proper full Irish breakfast.</p>
-          <p class="morocco-quote">Foot down, helmet on, and a full Irish waiting at the finish line.</p>
+        <div class="container story-hero-grid">
+          <div class="story-hero-copy reveal">
+            <a href="ireland.html" class="county-back-link">&larr; Back to the Ireland map</a>
+            <p class="eyebrow">County Westmeath</p>
+            <h1>Go-karting, and losing to the kids</h1>
+            <p class="story-lede">Dublin only had indoor tracks and we wanted to race outdoors, so we headed to Westmeath. Fun, fast, and humbling.</p>
+            <ul class="story-chips" aria-label="Story highlights">
+              <li>🏎️ Outdoor go-karting</li>
+              <li>🍳 Breakfast first</li>
+              <li>🧒 Out-driven by kids</li>
+              <li>😅 Worst driver: me</li>
+            </ul>
+          </div>
+
+          <figure class="story-video-frame story-video-frame--wide reveal">
+            <img src="images/westmeath-IMG_3406.jpeg" alt="Driving a blue go-kart around the outdoor track" />
+          </figure>
         </div>
-        <div id="westmeathGalleryGrid" class="morocco-gallery-grid" aria-label="Westmeath photo gallery"></div>
       </section>
+
+      <article class="container story-body">
+        <section class="story-chapter reveal">
+          <span class="story-time">The plan</span>
+          <h2>Outdoor or nothing</h2>
+          <p>Westmeath was just for go-karting. We wanted outdoor go-karting, and Dublin only had indoor tracks, so Westmeath was the best option. We had our breakfast first, then went to try our luck.</p>
+          <div class="story-chapter-photos">
+            <a class="gallery-thumb" href="images/westmeath-IMG_5167.jpeg" target="_blank" rel="noopener"><img src="images/westmeath-IMG_5167.jpeg" alt="A full breakfast with toast, eggs, sausages and coffee" loading="lazy" style="object-position: 50% 35%;" /></a>
+          </div>
+        </section>
+
+        <section class="story-chapter reveal">
+          <span class="story-time">On the track</span>
+          <h2>Trying our luck</h2>
+          <p>Then it was helmets on and out onto the track. It was so much fun.</p>
+          <div class="story-chapter-photos">
+            <a class="gallery-thumb" href="images/westmeath-IMG_3392.jpeg" target="_blank" rel="noopener"><img src="images/westmeath-IMG_3392.jpeg" alt="Hands on the wheel, looking down the outdoor track" loading="lazy" style="object-position: 50% 70%;" /></a>
+          </div>
+        </section>
+
+        <section class="story-chapter reveal">
+          <span class="story-time">The verdict</span>
+          <h2>Out-driven by kids</h2>
+          <p>A lot of kids joined us, and they were literally toying with those karts. I found out I was the one who drove the worst. Anyway, it was a new experience.</p>
+          <div class="story-chapter-photos">
+            <a class="gallery-thumb" href="images/westmeath-IMG_3403.jpeg" target="_blank" rel="noopener"><img src="images/westmeath-IMG_3403.jpeg" alt="A friend in a kart lined up with the others on the grid" loading="lazy" style="object-position: 50% 65%;" /></a>
+          </div>
+        </section>
+
+        <blockquote class="story-quote reveal">Worst driver on the track. Still a new experience.</blockquote>
+
+        <div class="story-next reveal">
+          <a href="ireland.html" class="story-next-secondary">&larr; Back to the Ireland map</a>
+        </div>
+      </article>
     </main>
 
-    <script src="westmeath-gallery.js"></script>
     <script>
-      const galleryGrid = document.getElementById('westmeathGalleryGrid');
-
-      if (galleryGrid && window.westmeathGalleryImages) {
-        window.westmeathGalleryImages.forEach((fileName) => {
-          const link = document.createElement('a');
-          link.className = 'gallery-thumb';
-          link.href = `images/${fileName}`;
-          link.target = '_blank';
-          link.rel = 'noopener';
-          link.innerHTML = `<img src="images/${fileName}" alt="Westmeath photo ${fileName}" loading="lazy" />`;
-          galleryGrid.appendChild(link);
-        });
-      }
+      (() => {
+        const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+        const items = document.querySelectorAll('.reveal');
+        if (!('IntersectionObserver' in window) || reduceMotion) {
+          items.forEach((el) => el.classList.add('is-visible'));
+          return;
+        }
+        const observer = new IntersectionObserver((entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('is-visible');
+              observer.unobserve(entry.target);
+            }
+          });
+        }, { threshold: 0.15 });
+        items.forEach((el) => observer.observe(el));
+      })();
     </script>
   </body>
 </html>
