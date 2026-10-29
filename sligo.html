@@ -4,54 +4,170 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Sligo | Abhijith JJ</title>
-    <meta name="description" content="A gallery of Sligo, Ireland travel memories and photos." />
+    <meta name="description" content="Three trips to Sligo: Classiebawn Castle and Benbulben, the Keash Caves, and the Gleniff Horseshoe and the Devil's Chimney." />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="styles.css?v=20261027-germany" />
+    <script>document.documentElement.classList.add('js');</script>
   </head>
   <body>
     <header class="site-header">
       <div class="container nav-bar">
         <a href="index.html" class="brand">Passport stamps &amp; <em>stories</em></a>
         <nav class="nav-links" aria-label="Main navigation">
-          <a href="index.html#stories">Stories</a>
           <a href="index.html#destinations">Destinations</a>
+          <a href="index.html#stories">Stories</a>
           <a href="index.html#about">About</a>
           <a href="index.html#newsletter">Newsletter</a>
         </nav>
       </div>
     </header>
 
-    <main class="container" style="padding: 3rem 0 4rem;">
-      <a href="ireland.html" class="county-back-link">&larr; Back to the Ireland map</a>
+    <main>
+      <section class="story-hero">
+        <img class="story-hero-ambient" src="images/sligo-IMG_8891.jpeg" alt="" aria-hidden="true" />
 
-      <section class="morocco-gallery-page">
-        <div class="morocco-gallery-copy">
-          <p class="eyebrow">County Sligo</p>
-          <h1>Sea-washed cliffs, quiet roads, and Yeats country.</h1>
-          <p>Sligo moved slowly — wide beaches under Ben Bulben, small coastal towns, and long stretches of road with nothing but sky and water.</p>
-          <p class="morocco-quote">A county of calm coastlines, dramatic headlands, and the kind of quiet that stays with you.</p>
+        <div class="container story-hero-grid">
+          <div class="story-hero-copy reveal">
+            <a href="ireland.html" class="county-back-link">&larr; Back to the Ireland map</a>
+            <p class="eyebrow">County Sligo, Ireland</p>
+            <h1>Three trips to Sligo</h1>
+            <svg class="route-map-svg hero-map" viewBox="0 0 420 285" role="img" aria-label="Map of three trips from Dublin: Mullaghmore and Classiebawn Castle, the Keash Caves, and the Gleniff Horseshoe">
+            <path class="route-map-line" d="M163,50 Q283,55 283,115 Q273,175 163,180 Q153,240 283,245" />
+
+            <g class="route-map-stop hero-map-stop">
+              <circle cx="163" cy="50" r="20" />
+              <text x="163" y="56" text-anchor="middle" class="hero-map-emoji">🚆</text>
+              <text x="131" y="46" text-anchor="end" class="route-map-city">From Dublin</text>
+              <text x="131" y="62" text-anchor="end" class="route-map-caption">Train to Sligo</text>
+            </g>
+
+            <g class="route-map-stop hero-map-stop">
+              <clipPath id="clip-classiebawn"><circle cx="283" cy="115" r="26" /></clipPath>
+              <image href="images/sligo-IMG_8891.jpeg" x="257" y="89" width="52" height="52" preserveAspectRatio="xMidYMid slice" clip-path="url(#clip-classiebawn)" />
+              <circle class="hero-map-ring" cx="283" cy="115" r="26" />
+              <text x="317" y="111" text-anchor="start" class="route-map-city">Classiebawn</text>
+              <text x="317" y="127" text-anchor="start" class="route-map-caption">Trip 1</text>
+            </g>
+
+            <g class="route-map-stop hero-map-stop">
+              <clipPath id="clip-keash"><circle cx="163" cy="180" r="26" /></clipPath>
+              <image href="images/sligo-IMG_0796.jpeg" x="137" y="154" width="52" height="52" preserveAspectRatio="xMidYMid slice" clip-path="url(#clip-keash)" />
+              <circle class="hero-map-ring" cx="163" cy="180" r="26" />
+              <text x="129" y="176" text-anchor="end" class="route-map-city">Keash Caves</text>
+              <text x="129" y="192" text-anchor="end" class="route-map-caption">Trip 2</text>
+            </g>
+
+            <g class="route-map-stop hero-map-stop">
+              <clipPath id="clip-gleniff"><circle cx="283" cy="245" r="26" /></clipPath>
+              <image href="images/sligo-IMG_5342.jpeg" x="257" y="219" width="52" height="52" preserveAspectRatio="xMidYMid slice" clip-path="url(#clip-gleniff)" />
+              <circle class="hero-map-ring" cx="283" cy="245" r="26" />
+              <text x="317" y="241" text-anchor="start" class="route-map-city">Gleniff</text>
+              <text x="317" y="257" text-anchor="start" class="route-map-caption">Trip 3</text>
+            </g>
+          </svg>
+            <ul class="story-chips" aria-label="Story highlights">
+              <li>🚆 Dublin to Sligo</li>
+              <li>🏰 Classiebawn Castle</li>
+              <li>⛰️ Benbulben</li>
+              <li>🐑 Sheep everywhere</li>
+              <li>🕳️ Keash Caves</li>
+              <li>🐴 Horses &amp; donkeys</li>
+              <li>💧 Devil&#8217;s Chimney</li>
+            </ul>
+          </div>
+
+          <figure class="story-video-frame reveal">
+            <img src="images/sligo-IMG_8891.jpeg" alt="Classiebawn Castle on the headland above pink sea thrift" />
+          </figure>
         </div>
-        <div id="sligoGalleryGrid" class="morocco-gallery-grid" aria-label="Sligo photo gallery"></div>
       </section>
+
+      <article class="container story-body">
+        <section class="story-chapter reveal">
+          <span class="story-time">Trip one</span>
+          <h2>Train, bus, and a castle by the sea</h2>
+          <p>I&#8217;ve been to Sligo three times. The first time, I took the train from Dublin to Sligo, then a bus to Mullaghmore, and walked towards the beautiful Classiebawn Castle, with Benbulben all around.</p>
+          <div class="story-chapter-photos">
+            <a class="gallery-thumb" href="images/sligo-IMG_4140.jpeg" target="_blank" rel="noopener"><img src="images/sligo-IMG_4140.jpeg" alt="Walking down a country road towards Classiebawn Castle" loading="lazy" /></a>
+            <a class="gallery-thumb" href="images/sligo-IMG_5294.jpeg" target="_blank" rel="noopener"><img src="images/sligo-IMG_5294.jpeg" alt="Walking across the grass with Classiebawn Castle on the headland" loading="lazy" style="object-position: 50% 70%;" /></a>
+            <a class="gallery-thumb" href="images/sligo-IMG_4105.jpeg" target="_blank" rel="noopener"><img src="images/sligo-IMG_4105.jpeg" alt="Selfie with friends resting on the grass" loading="lazy" /></a>
+          </div>
+        </section>
+
+        <section class="story-chapter reveal">
+          <span class="story-time">Trip one</span>
+          <h2>Sheep, Benbulben and the sea</h2>
+          <p>Walking from Mullaghmore to Classiebawn, we saw a lot of beautiful sheep, and a beautiful sea.</p>
+          <div class="story-chapter-photos">
+            <a class="gallery-thumb" href="images/sligo-IMG_8887.jpeg" target="_blank" rel="noopener"><img src="images/sligo-IMG_8887.jpeg" alt="A ewe and her lamb by a fence above the sea" loading="lazy" /></a>
+            <a class="gallery-thumb" href="images/sligo-IMG_8953.jpeg" target="_blank" rel="noopener"><img src="images/sligo-IMG_8953.jpeg" alt="Sheep grazing below the flat top of Benbulben" loading="lazy" style="object-position: 50% 60%;" /></a>
+            <a class="gallery-thumb" href="images/sligo-IMG_4123.jpeg" target="_blank" rel="noopener"><img src="images/sligo-IMG_4123.jpeg" alt="Waves rolling in over dark rocks streaked with green" loading="lazy" /></a>
+          </div>
+        </section>
+
+        <section class="story-chapter reveal">
+          <span class="story-time">Trip two</span>
+          <h2>Off the train early for Keash</h2>
+          <p>Next we went to the Keash Caves. We got off the train at the stop before Sligo and walked towards the caves. There wasn&#8217;t any footpath that way, but we made it.</p>
+          <div class="story-chapter-photos">
+            <a class="gallery-thumb" href="images/sligo-IMG_4661.jpeg" target="_blank" rel="noopener"><img src="images/sligo-IMG_4661.jpeg" alt="Walking across a field towards the Keash Caves in the hillside" loading="lazy" /></a>
+            <a class="gallery-thumb" href="images/sligo-IMG_4708.jpeg" target="_blank" rel="noopener"><img src="images/sligo-IMG_4708.jpeg" alt="A cave mouth in the limestone cliff" loading="lazy" style="object-position: 50% 70%;" /></a>
+            <a class="gallery-thumb" href="images/sligo-IMG_0796.jpeg" target="_blank" rel="noopener"><img src="images/sligo-IMG_0796.jpeg" alt="Three of us silhouetted in the mouth of a Keash cave" loading="lazy" /></a>
+            <a class="gallery-thumb" href="images/sligo-IMG_4767.jpeg" target="_blank" rel="noopener"><img src="images/sligo-IMG_4767.jpeg" alt="Patchwork green fields seen from the caves" loading="lazy" /></a>
+          </div>
+        </section>
+
+        <section class="story-chapter reveal">
+          <span class="story-time">Trip two</span>
+          <h2>A grandpa, horses and donkeys</h2>
+          <p>On the way back we saw a lot of animals at people&#8217;s homes: horses, donkeys and sheep. One grandpa even invited us into his home to show them to us.</p>
+          <div class="story-chapter-photos">
+            <a class="gallery-thumb" href="images/sligo-IMG_0835.jpeg" target="_blank" rel="noopener"><img src="images/sligo-IMG_0835.jpeg" alt="Meeting the donkeys over a wall" loading="lazy" /></a>
+            <a class="gallery-thumb" href="images/sligo-IMG_4732.jpeg" target="_blank" rel="noopener"><img src="images/sligo-IMG_4732.jpeg" alt="Two donkeys looking over a wall in front of a house" loading="lazy" /></a>
+            <a class="gallery-thumb" href="images/sligo-IMG_0829.jpeg" target="_blank" rel="noopener"><img src="images/sligo-IMG_0829.jpeg" alt="Two white horses in a field" loading="lazy" /></a>
+            <a class="gallery-thumb" href="images/sligo-IMG_0734.jpeg" target="_blank" rel="noopener"><img src="images/sligo-IMG_0734.jpeg" alt="Sheep under the trees in a green field" loading="lazy" /></a>
+            <a class="gallery-thumb" href="images/sligo-IMG_0740.jpeg" target="_blank" rel="noopener"><img src="images/sligo-IMG_0740.jpeg" alt="A horned ram looking straight at the camera" loading="lazy" /></a>
+          </div>
+        </section>
+
+        <section class="story-chapter reveal">
+          <span class="story-time">Trip three</span>
+          <h2>Gleniff Horseshoe and the Devil&#8217;s Chimney</h2>
+          <p>On the third trip we covered the Gleniff Horseshoe and the Devil&#8217;s Chimney.</p>
+          <div class="story-chapter-photos">
+            <a class="gallery-thumb" href="images/sligo-1bd1b457-e3e6-49f4-a1f4-a0d342645882.JPG" target="_blank" rel="noopener"><img src="images/sligo-1bd1b457-e3e6-49f4-a1f4-a0d342645882.JPG" alt="A lone road disappearing into the misty Gleniff Horseshoe" loading="lazy" /></a>
+            <a class="gallery-thumb" href="images/sligo-IMG_5342.jpeg" target="_blank" rel="noopener"><img src="images/sligo-IMG_5342.jpeg" alt="A ruined stone building under the clouds on the Gleniff road" loading="lazy" /></a>
+            <a class="gallery-thumb" href="images/sligo-IMG_5312.jpeg" target="_blank" rel="noopener"><img src="images/sligo-IMG_5312.jpeg" alt="A waterfall pouring off the cliffs" loading="lazy" /></a>
+            <a class="gallery-thumb" href="images/sligo-IMG_5317.jpeg" target="_blank" rel="noopener"><img src="images/sligo-IMG_5317.jpeg" alt="Sheep grazing beside a lake below the hills" loading="lazy" /></a>
+          </div>
+        </section>
+
+        <div class="story-next reveal">
+          <a href="ireland.html" class="story-next-secondary">&larr; Back to the Ireland map</a>
+        </div>
+      </article>
     </main>
 
-    <script src="sligo-gallery.js"></script>
     <script>
-      const galleryGrid = document.getElementById('sligoGalleryGrid');
-
-      if (galleryGrid && window.sligoGalleryImages) {
-        window.sligoGalleryImages.forEach((fileName) => {
-          const link = document.createElement('a');
-          link.className = 'gallery-thumb';
-          link.href = `images/${fileName}`;
-          link.target = '_blank';
-          link.rel = 'noopener';
-          link.innerHTML = `<img src="images/${fileName}" alt="Sligo photo ${fileName}" loading="lazy" />`;
-          galleryGrid.appendChild(link);
-        });
-      }
+      (() => {
+        const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+        const items = document.querySelectorAll('.reveal');
+        if (!('IntersectionObserver' in window) || reduceMotion) {
+          items.forEach((el) => el.classList.add('is-visible'));
+          return;
+        }
+        const observer = new IntersectionObserver((entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('is-visible');
+              observer.unobserve(entry.target);
+            }
+          });
+        }, { threshold: 0.15 });
+        items.forEach((el) => observer.observe(el));
+      })();
     </script>
   </body>
 </html>
