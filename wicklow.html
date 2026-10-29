@@ -4,54 +4,161 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Wicklow | Abhijith JJ</title>
-    <meta name="description" content="A gallery of Wicklow, Ireland travel memories and photos." />
+    <meta name="description" content="Three trips to Wicklow: a 20 km Glendalough hike, Bray Head to Greystones with dinner at Daata, and the Wicklow Mountains." />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="styles.css?v=20261027-germany" />
+    <script>document.documentElement.classList.add('js');</script>
   </head>
   <body>
     <header class="site-header">
       <div class="container nav-bar">
         <a href="index.html" class="brand">Passport stamps &amp; <em>stories</em></a>
         <nav class="nav-links" aria-label="Main navigation">
-          <a href="index.html#stories">Stories</a>
           <a href="index.html#destinations">Destinations</a>
+          <a href="index.html#stories">Stories</a>
           <a href="index.html#about">About</a>
           <a href="index.html#newsletter">Newsletter</a>
         </nav>
       </div>
     </header>
 
-    <main class="container" style="padding: 3rem 0 4rem;">
-      <a href="ireland.html" class="county-back-link">&larr; Back to the Ireland map</a>
+    <main>
+      <section class="story-hero">
+        <img class="story-hero-ambient" src="images/wicklow-glendalough-valley.jpeg" alt="" aria-hidden="true" />
 
-      <section class="morocco-gallery-page">
-        <div class="morocco-gallery-copy">
-          <p class="eyebrow">County Wicklow</p>
-          <h1>Mountain trails, hidden lakes, and wide open skies.</h1>
-          <p>Wicklow was rugged hillside trails, dark lakes tucked between the mountains, a windy walk out by the sea, and a well-earned dinner to end the day.</p>
-          <p class="morocco-quote">The Garden of Ireland, where every trail ends at a view.</p>
+        <div class="container story-hero-grid">
+          <div class="story-hero-copy reveal">
+            <a href="ireland.html" class="county-back-link">&larr; Back to the Ireland map</a>
+            <p class="eyebrow">County Wicklow</p>
+            <h1>Three trips into Wicklow</h1>
+            <svg class="route-map-svg hero-map" viewBox="0 0 420 270" role="img" aria-label="Map of three trips to Wicklow: the Glendalough hike, Bray Head to Greystones, and the Wicklow Mountains">
+            <path class="route-map-line" d="M163,50 Q283,55 283,110 Q273,165 163,170 Q153,225 283,230" />
+
+            <g class="route-map-stop hero-map-stop">
+              <clipPath id="clip-glendalough"><circle cx="163" cy="50" r="26" /></clipPath>
+              <image href="images/wicklow-glendalough-boardwalk.jpeg" x="137" y="24" width="52" height="52" preserveAspectRatio="xMidYMid slice" clip-path="url(#clip-glendalough)" />
+              <circle class="hero-map-ring" cx="163" cy="50" r="26" />
+              <text x="129" y="46" text-anchor="end" class="route-map-city">Glendalough</text>
+              <text x="129" y="62" text-anchor="end" class="route-map-caption">Trip 1: 20 km+</text>
+            </g>
+
+            <g class="route-map-stop hero-map-stop">
+              <clipPath id="clip-bray"><circle cx="283" cy="110" r="26" /></clipPath>
+              <image href="images/wicklow-bray-head.jpeg" x="257" y="84" width="52" height="52" preserveAspectRatio="xMidYMid slice" clip-path="url(#clip-bray)" />
+              <circle class="hero-map-ring" cx="283" cy="110" r="26" />
+              <text x="317" y="106" text-anchor="start" class="route-map-city">Bray Head</text>
+              <text x="317" y="122" text-anchor="start" class="route-map-caption">Trip 2</text>
+            </g>
+
+            <g class="route-map-stop hero-map-stop">
+              <clipPath id="clip-greystones"><circle cx="163" cy="170" r="26" /></clipPath>
+              <image href="images/wicklow-greystones-harbour.jpeg" x="137" y="144" width="52" height="52" preserveAspectRatio="xMidYMid slice" clip-path="url(#clip-greystones)" />
+              <circle class="hero-map-ring" cx="163" cy="170" r="26" />
+              <text x="129" y="166" text-anchor="end" class="route-map-city">Greystones</text>
+              <text x="129" y="182" text-anchor="end" class="route-map-caption">Sunset and dinner</text>
+            </g>
+
+            <g class="route-map-stop hero-map-stop">
+              <clipPath id="clip-mountains"><circle cx="283" cy="230" r="26" /></clipPath>
+              <image href="images/wicklow-IMG_5126.jpeg" x="257" y="204" width="52" height="52" preserveAspectRatio="xMidYMid slice" clip-path="url(#clip-mountains)" />
+              <circle class="hero-map-ring" cx="283" cy="230" r="26" />
+              <text x="317" y="226" text-anchor="start" class="route-map-city">The mountains</text>
+              <text x="317" y="242" text-anchor="start" class="route-map-caption">Trip 3</text>
+            </g>
+          </svg>
+            <ul class="story-chips" aria-label="Story highlights">
+              <li>🥾 20 km+ hike</li>
+              <li>🏞️ Upper Lake</li>
+              <li>🪵 Wooden path</li>
+              <li>⛏️ Mining history</li>
+              <li>🌅 Greystones sunset</li>
+              <li>🍛 Dinner at Daata</li>
+            </ul>
+          </div>
+
+          <figure class="story-video-frame story-video-frame--wide reveal">
+            <img src="images/wicklow-glendalough-valley.jpeg" alt="A rocky stream running down the valley towards Glendalough Upper Lake" />
+          </figure>
         </div>
-        <div id="wicklowGalleryGrid" class="morocco-gallery-grid" aria-label="Wicklow photo gallery"></div>
       </section>
+
+      <article class="container story-body">
+        <section class="story-chapter reveal">
+          <span class="story-time">Trip one</span>
+          <h2>Glendalough, more than 20 km</h2>
+          <p>The Glendalough hike was more than 20 km and long, but I really enjoyed it: the beautiful Upper Lake, the wooden path across the hills, the pines and all.</p>
+          <div class="story-chapter-photos">
+            <a class="gallery-thumb" href="images/wicklow-glendalough-boardwalk.jpeg" target="_blank" rel="noopener"><img src="images/wicklow-glendalough-boardwalk.jpeg" alt="Hikers walking a wooden boardwalk along the ridge above the valley" loading="lazy" /></a>
+            <a class="gallery-thumb" href="images/wicklow-glendalough-rest.jpeg" target="_blank" rel="noopener"><img src="images/wicklow-glendalough-rest.jpeg" alt="Feet up on a rock, resting above the valley" loading="lazy" /></a>
+          </div>
+        </section>
+
+        <section class="story-chapter reveal">
+          <span class="story-time">Trip one</span>
+          <h2>A valley that once mined</h2>
+          <p>I also learned that Glendalough was once a stronghold for mining, long before it became a place for hikers.</p>
+        </section>
+
+        <section class="story-chapter reveal">
+          <span class="story-time">Trip two</span>
+          <h2>Bray Head to Greystones</h2>
+          <p>On another day I hiked up Bray Head, then went on to Greystones: a beautiful harbour, and a good sunset to end the day.</p>
+          <div class="story-chapter-photos">
+            <a class="gallery-thumb" href="images/wicklow-bray-head.jpeg" target="_blank" rel="noopener"><img src="images/wicklow-bray-head.jpeg" alt="Yellow gorse on Bray Head above the curving bay and the town below" loading="lazy" style="object-position: 50% 45%;" /></a>
+            <a class="gallery-thumb" href="images/wicklow-greystones-harbour.jpeg" target="_blank" rel="noopener"><img src="images/wicklow-greystones-harbour.jpeg" alt="Boats in Greystones harbour at dusk" loading="lazy" style="object-position: 50% 65%;" /></a>
+            <a class="gallery-thumb" href="images/wicklow-IMG_2888.jpeg" target="_blank" rel="noopener"><img src="images/wicklow-IMG_2888.jpeg" alt="The harbour wall at sunset with the sea and headland beyond" loading="lazy" /></a>
+          </div>
+        </section>
+
+        <section class="story-chapter reveal">
+          <span class="story-time">Trip two</span>
+          <h2>Dinner at Daata</h2>
+          <p>After that we went to Daata and had a wholesome dinner.</p>
+          <div class="story-chapter-photos">
+            <a class="gallery-thumb" href="images/wicklow-IMG_2907.jpeg" target="_blank" rel="noopener"><img src="images/wicklow-IMG_2907.jpeg" alt="A table of curries, rice and a copper jug at Daata" loading="lazy" style="object-position: 50% 60%;" /></a>
+          </div>
+        </section>
+
+        <section class="story-chapter reveal">
+          <span class="story-time">Trip three</span>
+          <h2>Into the Wicklow Mountains</h2>
+          <p>My third trip took me into the Wicklow Mountains.</p>
+          <div class="story-chapter-photos">
+            <a class="gallery-thumb" href="images/wicklow-IMG_5126.jpeg" target="_blank" rel="noopener"><img src="images/wicklow-IMG_5126.jpeg" alt="A dark lake in a green valley under a cloudy sky" loading="lazy" /></a>
+            <a class="gallery-thumb" href="images/wicklow-IMG_5130.jpeg" target="_blank" rel="noopener"><img src="images/wicklow-IMG_5130.jpeg" alt="A Warning No Entry stone above the lake in the valley" loading="lazy" style="object-position: 50% 75%;" /></a>
+            <a class="gallery-thumb" href="images/wicklow-IMG_5108.jpeg" target="_blank" rel="noopener"><img src="images/wicklow-IMG_5108.jpeg" alt="Rocks at the edge of a mountain lake below a green hill" loading="lazy" style="object-position: 50% 60%;" /></a>
+            <a class="gallery-thumb" href="images/wicklow-IMG_2817.jpeg" target="_blank" rel="noopener"><img src="images/wicklow-IMG_2817.jpeg" alt="A stony path winding through the mountains" loading="lazy" /></a>
+          </div>
+        </section>
+
+        <blockquote class="story-quote reveal">More than 20 km, and I&#8217;d walk every one of them again.</blockquote>
+
+        <div class="story-next reveal">
+          <a href="ireland.html" class="story-next-secondary">&larr; Back to the Ireland map</a>
+        </div>
+      </article>
     </main>
 
-    <script src="wicklow-gallery.js"></script>
     <script>
-      const galleryGrid = document.getElementById('wicklowGalleryGrid');
-
-      if (galleryGrid && window.wicklowGalleryImages) {
-        window.wicklowGalleryImages.forEach((fileName) => {
-          const link = document.createElement('a');
-          link.className = 'gallery-thumb';
-          link.href = `images/${fileName}`;
-          link.target = '_blank';
-          link.rel = 'noopener';
-          link.innerHTML = `<img src="images/${fileName}" alt="Wicklow photo ${fileName}" loading="lazy" />`;
-          galleryGrid.appendChild(link);
-        });
-      }
+      (() => {
+        const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+        const items = document.querySelectorAll('.reveal');
+        if (!('IntersectionObserver' in window) || reduceMotion) {
+          items.forEach((el) => el.classList.add('is-visible'));
+          return;
+        }
+        const observer = new IntersectionObserver((entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('is-visible');
+              observer.unobserve(entry.target);
+            }
+          });
+        }, { threshold: 0.15 });
+        items.forEach((el) => observer.observe(el));
+      })();
     </script>
   </body>
 </html>
