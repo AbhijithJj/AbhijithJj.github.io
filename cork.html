@@ -3,55 +3,151 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Cork | Abhijith JJ</title>
-    <meta name="description" content="A gallery of Cork, Ireland travel memories and photos." />
+    <title>Cork and Cobh | Abhijith JJ</title>
+    <meta name="description" content="A short stint in Cork city, then a bucket-list visit to Cobh: the cathedral, the Deck of Cards and the town's Titanic history." />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="styles.css?v=20261027-germany" />
+    <script>document.documentElement.classList.add('js');</script>
   </head>
   <body>
     <header class="site-header">
       <div class="container nav-bar">
         <a href="index.html" class="brand">Passport stamps &amp; <em>stories</em></a>
         <nav class="nav-links" aria-label="Main navigation">
-          <a href="index.html#stories">Stories</a>
           <a href="index.html#destinations">Destinations</a>
+          <a href="index.html#stories">Stories</a>
           <a href="index.html#about">About</a>
           <a href="index.html#newsletter">Newsletter</a>
         </nav>
       </div>
     </header>
 
-    <main class="container" style="padding: 3rem 0 4rem;">
-      <a href="ireland.html" class="county-back-link">&larr; Back to the Ireland map</a>
+    <main>
+      <section class="story-hero">
+        <img class="story-hero-ambient" src="images/cork-IMG_3332.jpeg" alt="" aria-hidden="true" />
 
-      <section class="morocco-gallery-page">
-        <div class="morocco-gallery-copy">
-          <p class="eyebrow">County Cork</p>
-          <h1>Rainbow rows, river streets, and a spire over the harbour.</h1>
-          <p>Cork was busy city streets and street art along the river, then a trip out to the coast where rows of pastel houses climb the hill beneath a towering cathedral.</p>
-          <p class="morocco-quote">Grey skies or blue, the colours of Cork never fade.</p>
+        <div class="container story-hero-grid">
+          <div class="story-hero-copy reveal">
+            <a href="ireland.html" class="county-back-link">&larr; Back to the Ireland map</a>
+            <p class="eyebrow">County Cork</p>
+            <h1>Cork city, then bucket-list Cobh</h1>
+            <svg class="route-map-svg hero-map" viewBox="0 0 420 270" role="img" aria-label="Map of the afternoon: from Kerry to Cork city for lunch, then Cobh's cathedral and the Deck of Cards houses">
+            <path class="route-map-line" d="M163,50 Q283,55 283,110 Q273,165 163,170 Q153,225 283,230" />
+
+            <g class="route-map-stop hero-map-stop">
+              <circle cx="163" cy="50" r="20" />
+              <text x="163" y="56" text-anchor="middle" class="hero-map-emoji">🚗</text>
+              <text x="131" y="46" text-anchor="end" class="route-map-city">From Kerry</text>
+              <text x="131" y="62" text-anchor="end" class="route-map-caption">After Torc</text>
+            </g>
+
+            <g class="route-map-stop hero-map-stop">
+              <clipPath id="clip-city"><circle cx="283" cy="110" r="26" /></clipPath>
+              <image href="images/cork-IMG_3308.jpeg" x="257" y="84" width="52" height="52" preserveAspectRatio="xMidYMid slice" clip-path="url(#clip-city)" />
+              <circle class="hero-map-ring" cx="283" cy="110" r="26" />
+              <text x="317" y="106" text-anchor="start" class="route-map-city">Cork city</text>
+              <text x="317" y="122" text-anchor="start" class="route-map-caption">A wander and lunch</text>
+            </g>
+
+            <g class="route-map-stop hero-map-stop">
+              <clipPath id="clip-cathedral"><circle cx="163" cy="170" r="26" /></clipPath>
+              <image href="images/cork-IMG_3346.jpeg" x="137" y="144" width="52" height="52" preserveAspectRatio="xMidYMin slice" clip-path="url(#clip-cathedral)" />
+              <circle class="hero-map-ring" cx="163" cy="170" r="26" />
+              <text x="129" y="166" text-anchor="end" class="route-map-city">Cobh Cathedral</text>
+              <text x="129" y="182" text-anchor="end" class="route-map-caption">Surreal inside</text>
+            </g>
+
+            <g class="route-map-stop hero-map-stop">
+              <clipPath id="clip-deck"><circle cx="283" cy="230" r="26" /></clipPath>
+              <image href="images/cork-IMG_3316.jpeg" x="257" y="204" width="52" height="52" preserveAspectRatio="xMidYMid slice" clip-path="url(#clip-deck)" />
+              <circle class="hero-map-ring" cx="283" cy="230" r="26" />
+              <text x="317" y="226" text-anchor="start" class="route-map-city">Deck of Cards</text>
+              <text x="317" y="242" text-anchor="start" class="route-map-caption">The best view</text>
+            </g>
+          </svg>
+            <ul class="story-chips" aria-label="Story highlights">
+              <li>🏙️ Cork city</li>
+              <li>🍽️ Lunch</li>
+              <li>⛪ Cobh Cathedral</li>
+              <li>🃏 Deck of Cards</li>
+              <li>🚢 Titanic history</li>
+            </ul>
+          </div>
+
+          <figure class="story-video-frame reveal">
+            <img src="images/cork-IMG_3332.jpeg" alt="A steep Cobh street of red, pink and blue houses" />
+          </figure>
         </div>
-        <div id="corkGalleryGrid" class="morocco-gallery-grid" aria-label="Cork photo gallery"></div>
       </section>
+
+      <article class="container story-body">
+        <section class="story-chapter reveal">
+          <span class="story-time">Afternoon</span>
+          <h2>A short stint in Cork</h2>
+          <p>Cork was a short stint. We just roamed around the city centre and had our lunch.</p>
+          <div class="story-chapter-photos">
+            <a class="gallery-thumb" href="images/cork-IMG_3308.jpeg" target="_blank" rel="noopener"><img src="images/cork-IMG_3308.jpeg" alt="A busy shopping street in Cork city centre" loading="lazy" /></a>
+            <a class="gallery-thumb" href="images/cork-IMG_3313.jpeg" target="_blank" rel="noopener"><img src="images/cork-IMG_3313.jpeg" alt="A giant mural of a face on a Cork building" loading="lazy" style="object-position: 50% 55%;" /></a>
+            <a class="gallery-thumb" href="images/cork-IMG_3314.jpeg" target="_blank" rel="noopener"><img src="images/cork-IMG_3314.jpeg" alt="A yellow building beside the river in Cork" loading="lazy" style="object-position: 50% 65%;" /></a>
+            <a class="gallery-thumb" href="images/cork-IMG_3315.jpeg" target="_blank" rel="noopener"><img src="images/cork-IMG_3315.jpeg" alt="A sloping street of colourful buildings in Cork" loading="lazy" /></a>
+          </div>
+        </section>
+
+        <section class="story-chapter reveal">
+          <span class="story-time">Cobh</span>
+          <h2>A bucket-list stop</h2>
+          <p>Then we went to Cobh, which had been on my Irish bucket list for a long time. First we visited the huge cathedral, and the interior was surreal.</p>
+          <div class="story-chapter-photos">
+            <a class="gallery-thumb" href="images/cork-IMG_3346.jpeg" target="_blank" rel="noopener"><img src="images/cork-IMG_3346.jpeg" alt="The spire of Cobh's cathedral rising behind a row of colourful houses" loading="lazy" style="object-position: 50% 65%;" /></a>
+          </div>
+        </section>
+
+        <section class="story-chapter reveal">
+          <span class="story-time">The view</span>
+          <h2>The Deck of Cards</h2>
+          <p>Then we went looking for the best view of the Deck of Cards, the row of colourful houses stacked down the steep hill.</p>
+          <div class="story-chapter-photos">
+            <a class="gallery-thumb" href="images/cork-IMG_3324.jpeg" target="_blank" rel="noopener"><img src="images/cork-IMG_3324.jpeg" alt="Pastel rooftops leading down to the water" loading="lazy" style="object-position: 50% 70%;" /></a>
+            <a class="gallery-thumb" href="images/cork-IMG_3316.jpeg" target="_blank" rel="noopener"><img src="images/cork-IMG_3316.jpeg" alt="The Deck of Cards houses stacked down the hill under a grey sky" loading="lazy" /></a>
+            <a class="gallery-thumb" href="images/cork-IMG_3354.jpeg" target="_blank" rel="noopener"><img src="images/cork-IMG_3354.jpeg" alt="The Deck of Cards houses lining a steep road" loading="lazy" style="object-position: 50% 60%;" /></a>
+          </div>
+        </section>
+
+        <section class="story-chapter reveal">
+          <span class="story-time">The history</span>
+          <h2>Where ships docked</h2>
+          <p>I also got to know Cobh&#8217;s docking history, from the Titanic to the many other ships that called here.</p>
+        </section>
+
+        <blockquote class="story-quote reveal">Cobh had been on my list for years. It didn&#8217;t disappoint.</blockquote>
+
+        <div class="story-next reveal">
+          <a href="kerry.html" class="social-link">&larr; Before this: Kerry</a>
+          <a href="ireland.html" class="story-next-secondary">&larr; Back to the Ireland map</a>
+        </div>
+      </article>
     </main>
 
-    <script src="cork-gallery.js"></script>
     <script>
-      const galleryGrid = document.getElementById('corkGalleryGrid');
-
-      if (galleryGrid && window.corkGalleryImages) {
-        window.corkGalleryImages.forEach((fileName) => {
-          const link = document.createElement('a');
-          link.className = 'gallery-thumb';
-          link.href = `images/${fileName}`;
-          link.target = '_blank';
-          link.rel = 'noopener';
-          link.innerHTML = `<img src="images/${fileName}" alt="Cork photo ${fileName}" loading="lazy" />`;
-          galleryGrid.appendChild(link);
-        });
-      }
+      (() => {
+        const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+        const items = document.querySelectorAll('.reveal');
+        if (!('IntersectionObserver' in window) || reduceMotion) {
+          items.forEach((el) => el.classList.add('is-visible'));
+          return;
+        }
+        const observer = new IntersectionObserver((entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('is-visible');
+              observer.unobserve(entry.target);
+            }
+          });
+        }, { threshold: 0.15 });
+        items.forEach((el) => observer.observe(el));
+      })();
     </script>
   </body>
 </html>
