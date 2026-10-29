@@ -4,54 +4,216 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Aran Islands | Abhijith JJ</title>
-    <meta name="description" content="A gallery of Aran Islands, Ireland travel memories and photos." />
+    <meta name="description" content="A day on the Aran Islands: bus and ferry from Dublin, cycling past ruins and cliffs, alpacas and seals, and the Wormhole." />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="styles.css?v=20261027-germany" />
+    <script>document.documentElement.classList.add('js');</script>
   </head>
   <body>
     <header class="site-header">
       <div class="container nav-bar">
         <a href="index.html" class="brand">Passport stamps &amp; <em>stories</em></a>
         <nav class="nav-links" aria-label="Main navigation">
-          <a href="index.html#stories">Stories</a>
           <a href="index.html#destinations">Destinations</a>
+          <a href="index.html#stories">Stories</a>
           <a href="index.html#about">About</a>
           <a href="index.html#newsletter">Newsletter</a>
         </nav>
       </div>
     </header>
 
-    <main class="container" style="padding: 3rem 0 4rem;">
-      <a href="ireland.html" class="county-back-link">&larr; Back to the Ireland map</a>
+    <main>
+      <section class="story-hero">
+        <video class="story-hero-ambient" src="images/aran-wormhole.mp4" poster="images/aran-wormhole-poster.jpg" autoplay muted loop playsinline aria-hidden="true"></video>
 
-      <section class="morocco-gallery-page">
-        <div class="morocco-gallery-copy">
-          <p class="eyebrow">Aran Islands</p>
-          <h1>Limestone cliffs, stone walls, and the edge of the Atlantic.</h1>
-          <p>Out past Galway Bay, the Aran Islands felt like a different pace entirely — bare karst fields, dry-stone walls in every direction, and cliffs dropping straight into the sea.</p>
-          <p class="morocco-quote">A place of wind, stone, and views that stretch all the way to the horizon.</p>
+        <div class="container story-hero-grid">
+          <div class="story-hero-copy reveal">
+            <a href="ireland.html" class="county-back-link">&larr; Back to the Ireland map</a>
+            <p class="eyebrow">Inis Mór, Aran Islands</p>
+            <h1>A day on two wheels on the Aran Islands</h1>
+            <svg class="route-map-svg hero-map" viewBox="0 0 420 390" role="img" aria-label="Map of the day: bus from Dublin to Galway, bus to Rossaveal, ferry to the Aran Islands, cycling to ruins and cliffs, the Wormhole, and back to Dublin by train">
+            <path class="route-map-line" d="M163,50 Q283,55 283,110 Q273,165 163,170 Q153,225 283,230 Q273,285 163,290 Q153,345 283,350" />
+
+            <g class="route-map-stop hero-map-stop">
+              <circle cx="163" cy="50" r="20" />
+              <text x="163" y="56" text-anchor="middle" class="hero-map-emoji">🚌</text>
+              <text x="131" y="46" text-anchor="end" class="route-map-city">Dublin</text>
+              <text x="131" y="62" text-anchor="end" class="route-map-caption">Bus to Galway</text>
+            </g>
+
+            <g class="route-map-stop hero-map-stop">
+              <circle cx="283" cy="110" r="20" />
+              <text x="283" y="116" text-anchor="middle" class="hero-map-emoji">🚌</text>
+              <text x="315" y="106" text-anchor="start" class="route-map-city">Galway</text>
+              <text x="315" y="122" text-anchor="start" class="route-map-caption">Bus to Rossaveal</text>
+            </g>
+
+            <g class="route-map-stop hero-map-stop">
+              <clipPath id="clip-ferry"><circle cx="163" cy="170" r="26" /></clipPath>
+              <image href="images/aran-ferry-deck.jpeg" x="137" y="144" width="52" height="52" preserveAspectRatio="xMidYMid slice" clip-path="url(#clip-ferry)" />
+              <circle class="hero-map-ring" cx="163" cy="170" r="26" />
+              <text x="129" y="166" text-anchor="end" class="route-map-city">Rossaveal</text>
+              <text x="129" y="182" text-anchor="end" class="route-map-caption">Ferry to Aran</text>
+            </g>
+
+            <g class="route-map-stop hero-map-stop">
+              <clipPath id="clip-bike"><circle cx="283" cy="230" r="26" /></clipPath>
+              <image href="images/aran-IMG_4543.jpeg" x="257" y="204" width="52" height="52" preserveAspectRatio="xMidYMax slice" clip-path="url(#clip-bike)" />
+              <circle class="hero-map-ring" cx="283" cy="230" r="26" />
+              <text x="317" y="226" text-anchor="start" class="route-map-city">By bike</text>
+              <text x="317" y="242" text-anchor="start" class="route-map-caption">Ruins and cliffs</text>
+            </g>
+
+            <g class="route-map-stop hero-map-stop">
+              <clipPath id="clip-wormhole"><circle cx="163" cy="290" r="26" /></clipPath>
+              <image href="images/aran-IMG_4582.jpeg" x="137" y="264" width="52" height="52" preserveAspectRatio="xMidYMid slice" clip-path="url(#clip-wormhole)" />
+              <circle class="hero-map-ring" cx="163" cy="290" r="26" />
+              <text x="129" y="286" text-anchor="end" class="route-map-city">The Wormhole</text>
+              <text x="129" y="302" text-anchor="end" class="route-map-caption">Cliff jumpers</text>
+            </g>
+
+            <g class="route-map-stop hero-map-stop">
+              <circle cx="283" cy="350" r="20" />
+              <text x="283" y="356" text-anchor="middle" class="hero-map-emoji">🚆</text>
+              <text x="315" y="346" text-anchor="start" class="route-map-city">Back to Dublin</text>
+              <text x="315" y="362" text-anchor="start" class="route-map-caption">Last ferry, then train</text>
+            </g>
+          </svg>
+            <ul class="story-chips" aria-label="Story highlights">
+              <li>🚌 Bus to Galway</li>
+              <li>⛴️ Aran Island Ferries</li>
+              <li>🚲 Bike rental</li>
+              <li>🏰 Ruins and cliffs</li>
+              <li>🦙 Alpacas and horses</li>
+              <li>🕳️ The Wormhole</li>
+            </ul>
+          </div>
+
+          <figure class="story-video-frame reveal">
+            <video id="storyVideo" src="images/aran-wormhole.mp4" poster="images/aran-wormhole-poster.jpg" autoplay muted loop playsinline aria-label="People jumping into the Wormhole from the cliffs on the Aran Islands"></video>
+            <button type="button" class="story-video-toggle" id="storyVideoToggle" aria-label="Pause video">❚❚</button>
+          </figure>
         </div>
-        <div id="aranIslandsGalleryGrid" class="morocco-gallery-grid" aria-label="Aran Islands photo gallery"></div>
       </section>
+
+      <article class="container story-body">
+        <section class="story-chapter reveal">
+          <span class="story-time">Getting there</span>
+          <h2>Bus, bus, ferry</h2>
+          <p>We took the bus from Dublin to Galway, another bus on to Rossaveal, and then the ferry across to the Aran Islands with Aran Island Ferries.</p>
+          <div class="story-chapter-photos">
+            <a class="gallery-thumb" href="images/aran-ferry-inside.jpeg" target="_blank" rel="noopener"><img src="images/aran-ferry-inside.jpeg" alt="Inside the Aran Island Ferries boat" loading="lazy" /></a>
+            <a class="gallery-thumb" href="images/aran-ferry-deck.jpeg" target="_blank" rel="noopener"><img src="images/aran-ferry-deck.jpeg" alt="On the ferry deck, with the wake trailing behind" loading="lazy" style="object-position: 50% 70%;" /></a>
+          </div>
+        </section>
+
+        <section class="story-chapter reveal">
+          <span class="story-time">On the island</span>
+          <h2>Two wheels and a whole island</h2>
+          <p>On the island we rented bicycles to roam around. Stone-walled lanes, open sky and the sea never far away.</p>
+          <div class="story-chapter-photos">
+            <a class="gallery-thumb" href="images/aran-IMG_4557.jpeg" target="_blank" rel="noopener"><img src="images/aran-IMG_4557.jpeg" alt="Rented bikes parked against a wooden fence" loading="lazy" style="object-position: 50% 75%;" /></a>
+            <a class="gallery-thumb" href="images/aran-IMG_4543.jpeg" target="_blank" rel="noopener"><img src="images/aran-IMG_4543.jpeg" alt="Handlebars and a long gravel road between stone walls" loading="lazy" style="object-position: 50% 80%;" /></a>
+            <a class="gallery-thumb" href="images/aran-IMG_4536.jpeg" target="_blank" rel="noopener"><img src="images/aran-IMG_4536.jpeg" alt="Walking down a lane between dry-stone walls" loading="lazy" /></a>
+            <a class="gallery-thumb" href="images/aran-IMG_4548.jpeg" target="_blank" rel="noopener"><img src="images/aran-IMG_4548.jpeg" alt="A painted mural building beside a winding road" loading="lazy" style="object-position: 50% 75%;" /></a>
+          </div>
+        </section>
+
+        <section class="story-chapter reveal">
+          <span class="story-time">First stops</span>
+          <h2>Ruins, cliffs and stones</h2>
+          <p>First we saw a ruined castle, then the cliffs, and ruined stones scattered across the island, some of them piled into towers by visitors.</p>
+          <div class="story-chapter-photos">
+            <a class="gallery-thumb" href="images/aran-stone-arch.jpeg" target="_blank" rel="noopener"><img src="images/aran-stone-arch.jpeg" alt="A ruined stone arch on the cliff edge" loading="lazy" /></a>
+            <a class="gallery-thumb" href="images/aran-IMG_4517.jpeg" target="_blank" rel="noopener"><img src="images/aran-IMG_4517.jpeg" alt="Limestone cliffs dropping into the Atlantic" loading="lazy" /></a>
+            <a class="gallery-thumb" href="images/aran-cliff-sea.jpeg" target="_blank" rel="noopener"><img src="images/aran-cliff-sea.jpeg" alt="A sheer cliff face above clear green water" loading="lazy" /></a>
+            <a class="gallery-thumb" href="images/aran-IMG_4521.jpeg" target="_blank" rel="noopener"><img src="images/aran-IMG_4521.jpeg" alt="Flat limestone stretching out to the cliff edge" loading="lazy" /></a>
+            <a class="gallery-thumb" href="images/aran-cliff-edge.jpeg" target="_blank" rel="noopener"><img src="images/aran-cliff-edge.jpeg" alt="Two friends standing at the cliff edge" loading="lazy" style="object-position: 50% 70%;" /></a>
+            <a class="gallery-thumb" href="images/aran-group-cliff.jpeg" target="_blank" rel="noopener"><img src="images/aran-group-cliff.jpeg" alt="Group selfie on the clifftop" loading="lazy" /></a>
+            <a class="gallery-thumb" href="images/aran-IMG_4563.jpeg" target="_blank" rel="noopener"><img src="images/aran-IMG_4563.jpeg" alt="Stacked stone towers by the shore" loading="lazy" style="object-position: 50% 70%;" /></a>
+            <a class="gallery-thumb" href="images/aran-IMG_4564.jpeg" target="_blank" rel="noopener"><img src="images/aran-IMG_4564.jpeg" alt="Friends stacking stones on a rocky beach" loading="lazy" style="object-position: 50% 70%;" /></a>
+          </div>
+        </section>
+
+        <section class="story-chapter reveal">
+          <span class="story-time">Along the way</span>
+          <h2>Alpacas, horses and seals</h2>
+          <p>All the way round we kept meeting animals: alpacas, horses, and even seals.</p>
+          <div class="story-chapter-photos">
+            <a class="gallery-thumb" href="images/aran-IMG_4552.jpeg" target="_blank" rel="noopener"><img src="images/aran-IMG_4552.jpeg" alt="Two alpacas in a stone-walled field" loading="lazy" style="object-position: 50% 65%;" /></a>
+            <a class="gallery-thumb" href="images/aran-IMG_4544.jpeg" target="_blank" rel="noopener"><img src="images/aran-IMG_4544.jpeg" alt="A white horse grazing in front of a cottage" loading="lazy" style="object-position: 50% 70%;" /></a>
+            <a class="gallery-thumb" href="images/aran-IMG_4547.jpeg" target="_blank" rel="noopener"><img src="images/aran-IMG_4547.jpeg" alt="A horse and covered cart on the island road" loading="lazy" /></a>
+          </div>
+        </section>
+
+        <section class="story-chapter reveal">
+          <span class="story-time">The highlight</span>
+          <h2>The Wormhole</h2>
+          <p>Then we went to see the Wormhole, and it was spectacular. Some people were even jumping into it from a height. Scary and eye-pleasing at the same time (that&#8217;s the video at the top).</p>
+          <div class="story-chapter-photos">
+            <a class="gallery-thumb" href="images/aran-IMG_4582.jpeg" target="_blank" rel="noopener"><img src="images/aran-IMG_4582.jpeg" alt="The rectangular pool of the Wormhole cut into the rock" loading="lazy" /></a>
+            <a class="gallery-thumb" href="images/aran-IMG_4594.jpeg" target="_blank" rel="noopener"><img src="images/aran-IMG_4594.jpeg" alt="Layered rock ledges above a green tidal pool by the Wormhole" loading="lazy" /></a>
+          </div>
+        </section>
+
+        <section class="story-chapter reveal">
+          <span class="story-time">Heading home</span>
+          <h2>Racing the last ferry</h2>
+          <p>The last ferry was in the evening, so with time running out we made it back to the ferry station before 6, then caught the train home to Dublin.</p>
+          <div class="story-chapter-photos">
+            <a class="gallery-thumb" href="images/aran-IMG_4605.jpeg" target="_blank" rel="noopener"><img src="images/aran-IMG_4605.jpeg" alt="Stone benches and a viewer looking out to sea" loading="lazy" /></a>
+            <a class="gallery-thumb" href="images/aran-IMG_4606.jpeg" target="_blank" rel="noopener"><img src="images/aran-IMG_4606.jpeg" alt="Selfie with friends and their bikes at the end of the day" loading="lazy" /></a>
+          </div>
+        </section>
+
+        <blockquote class="story-quote reveal">Scary and eye-pleasing at the same time.</blockquote>
+
+        <div class="story-next reveal">
+          <a href="ireland.html" class="story-next-secondary">&larr; Back to the Ireland map</a>
+        </div>
+      </article>
     </main>
 
-    <script src="aran-islands-gallery.js"></script>
     <script>
-      const galleryGrid = document.getElementById('aranIslandsGalleryGrid');
+      (() => {
+        const video = document.getElementById('storyVideo');
+        const ambient = document.querySelector('.story-hero-ambient');
+        const toggle = document.getElementById('storyVideoToggle');
+        const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
-      if (galleryGrid && window.aranIslandsGalleryImages) {
-        window.aranIslandsGalleryImages.forEach((fileName) => {
-          const link = document.createElement('a');
-          link.className = 'gallery-thumb';
-          link.href = `images/${fileName}`;
-          link.target = '_blank';
-          link.rel = 'noopener';
-          link.innerHTML = `<img src="images/${fileName}" alt="Aran Islands photo ${fileName}" loading="lazy" />`;
-          galleryGrid.appendChild(link);
-        });
-      }
+        const setPlaying = (playing) => {
+          [video, ambient].forEach((v) => {
+            if (!v) return;
+            if (playing) {
+              v.play().catch(() => {});
+            } else {
+              v.pause();
+            }
+          });
+          toggle.textContent = playing ? '❚❚' : '▶';
+          toggle.setAttribute('aria-label', playing ? 'Pause video' : 'Play video');
+        };
+
+        if (reduceMotion) setPlaying(false);
+        toggle.addEventListener('click', () => setPlaying(video.paused));
+
+        const items = document.querySelectorAll('.reveal');
+        if (!('IntersectionObserver' in window) || reduceMotion) {
+          items.forEach((el) => el.classList.add('is-visible'));
+          return;
+        }
+        const observer = new IntersectionObserver((entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('is-visible');
+              observer.unobserve(entry.target);
+            }
+          });
+        }, { threshold: 0.15 });
+        items.forEach((el) => observer.observe(el));
+      })();
     </script>
   </body>
 </html>
