@@ -8,7 +8,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="styles.css?v=20261029-ireland" />
+    <link rel="stylesheet" href="styles.css?v=20261029-responsive" />
   </head>
   <body>
     <header class="site-header">
@@ -89,6 +89,11 @@
             link.appendChild(label);
 
             markerGroup.appendChild(link);
+
+            // Labels near the coast can spill past the map edge on narrow screens; nudge them back inside.
+            const box = label.getBBox();
+            if (box.x < 4) label.setAttribute('x', county.x + (4 - box.x));
+            else if (box.x + box.width > 266) label.setAttribute('x', county.x - (box.x + box.width - 266));
           } else {
             const group = document.createElementNS(svgNS, 'g');
             group.setAttribute('class', 'county-marker county-marker--pending');

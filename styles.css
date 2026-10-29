@@ -1873,3 +1873,44 @@ html.intro-playing {
   font-style: italic;
   color: var(--muted);
 }
+
+/* ---------- Phone and tablet polish ---------- */
+@media (max-width: 860px) {
+  /* Photo-gallery pages: stack the intro above the photos instead of squeezing two columns */
+  .morocco-gallery-page {
+    grid-template-columns: 1fr;
+    padding: 1.25rem;
+  }
+
+  .morocco-gallery-copy h1 {
+    font-size: clamp(1.6rem, 6vw, 2.2rem);
+    line-height: 1.15;
+  }
+}
+
+@media (max-width: 640px) {
+  /* Bigger tap targets in the header */
+  .nav-links a {
+    display: inline-block;
+    padding: 0.4rem 0.3rem;
+  }
+
+  /* Newsletter form spans the card */
+  .newsletter-form {
+    align-self: stretch;
+    width: 100%;
+  }
+
+  .newsletter-form input {
+    min-width: 0;
+  }
+
+  .county-map-section {
+    padding: 0.5rem;
+    border-radius: 20px;
+  }
+
+  .story-chips li {
+    font-size: 0.85rem;
+  }
+}
