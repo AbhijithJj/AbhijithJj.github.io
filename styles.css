@@ -884,6 +884,30 @@ h2 {
   font-weight: 800;
 }
 
+.county-map-intro {
+  max-width: 760px;
+  margin: 0.5rem auto 1rem;
+  text-align: center;
+}
+
+.county-map-intro .eyebrow {
+  margin-bottom: 0.35rem;
+}
+
+.county-map-intro .county-map-title {
+  margin-bottom: 0.4rem;
+  font-size: clamp(1.5rem, 3.2vw, 2.1rem);
+  line-height: 1.15;
+  text-wrap: balance;
+}
+
+.county-map-sub {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.98rem;
+  line-height: 1.55;
+}
+
 .county-back-link {
   display: inline-block;
   margin-bottom: 1rem;
