@@ -4,54 +4,183 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Kerry | Abhijith JJ</title>
-    <meta name="description" content="A gallery of Kerry, Ireland travel memories and photos." />
+    <meta name="description" content="A road trip from Dublin through Kerry: breakfast in Tralee, Ballybunion, the Ring of Kerry, an overnight stay and Torc Waterfall." />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="styles.css?v=20261027-germany" />
+    <script>document.documentElement.classList.add('js');</script>
   </head>
   <body>
     <header class="site-header">
       <div class="container nav-bar">
         <a href="index.html" class="brand">Passport stamps &amp; <em>stories</em></a>
         <nav class="nav-links" aria-label="Main navigation">
-          <a href="index.html#stories">Stories</a>
           <a href="index.html#destinations">Destinations</a>
+          <a href="index.html#stories">Stories</a>
           <a href="index.html#about">About</a>
           <a href="index.html#newsletter">Newsletter</a>
         </nav>
       </div>
     </header>
 
-    <main class="container" style="padding: 3rem 0 4rem;">
-      <a href="ireland.html" class="county-back-link">&larr; Back to the Ireland map</a>
+    <main>
+      <section class="story-hero">
+        <img class="story-hero-ambient" src="images/kerry-IMG_3271.jpeg" alt="" aria-hidden="true" />
 
-      <section class="morocco-gallery-page">
-        <div class="morocco-gallery-copy">
-          <p class="eyebrow">County Kerry</p>
-          <h1>Harbours, waterfalls, and long walks by the water.</h1>
-          <p>Kerry was colourful harbour towns, wild green coastline, misty forest trails, and slow evenings by the fire with good food and better company.</p>
-          <p class="morocco-quote">A county where every turn of the road opens onto another view.</p>
+        <div class="container story-hero-grid">
+          <div class="story-hero-copy reveal">
+            <a href="ireland.html" class="county-back-link">&larr; Back to the Ireland map</a>
+            <p class="eyebrow">County Kerry</p>
+            <h1>A road trip around the Ring of Kerry</h1>
+            <svg class="route-map-svg hero-map" viewBox="0 0 420 420" role="img" aria-label="Map of the road trip: Dublin by car, breakfast in Tralee, Ballybunion, the Ring of Kerry, dinner and an overnight stay, Torc Waterfall, then on to Cork">
+            <path class="route-map-line" d="M163,50 Q283,55 283,105 Q273,155 163,160 Q153,210 283,215 Q273,265 163,270 Q153,320 283,325 Q273,375 163,380" />
+
+            <g class="route-map-stop hero-map-stop">
+              <circle cx="163" cy="50" r="20" />
+              <text x="163" y="56" text-anchor="middle" class="hero-map-emoji">🚗</text>
+              <text x="131" y="46" text-anchor="end" class="route-map-city">Dublin</text>
+              <text x="131" y="62" text-anchor="end" class="route-map-caption">10 AM, by car</text>
+            </g>
+
+            <g class="route-map-stop hero-map-stop">
+              <circle cx="283" cy="105" r="20" />
+              <text x="283" y="111" text-anchor="middle" class="hero-map-emoji">🍳</text>
+              <text x="315" y="101" text-anchor="start" class="route-map-city">Tralee</text>
+              <text x="315" y="117" text-anchor="start" class="route-map-caption">Breakfast</text>
+            </g>
+
+            <g class="route-map-stop hero-map-stop">
+              <clipPath id="clip-ballybunion"><circle cx="163" cy="160" r="26" /></clipPath>
+              <image href="images/kerry-IMG_3191.jpeg" x="137" y="134" width="52" height="52" preserveAspectRatio="xMidYMid slice" clip-path="url(#clip-ballybunion)" />
+              <circle class="hero-map-ring" cx="163" cy="160" r="26" />
+              <text x="129" y="156" text-anchor="end" class="route-map-city">Ballybunion</text>
+              <text x="129" y="172" text-anchor="end" class="route-map-caption">Beach and ruins</text>
+            </g>
+
+            <g class="route-map-stop hero-map-stop">
+              <clipPath id="clip-ring"><circle cx="283" cy="215" r="26" /></clipPath>
+              <image href="images/kerry-IMG_3267.jpeg" x="257" y="189" width="52" height="52" preserveAspectRatio="xMidYMid slice" clip-path="url(#clip-ring)" />
+              <circle class="hero-map-ring" cx="283" cy="215" r="26" />
+              <text x="317" y="211" text-anchor="start" class="route-map-city">Ring of Kerry</text>
+              <text x="317" y="227" text-anchor="start" class="route-map-caption">So beautiful</text>
+            </g>
+
+            <g class="route-map-stop hero-map-stop">
+              <clipPath id="clip-night"><circle cx="163" cy="270" r="26" /></clipPath>
+              <image href="images/kerry-IMG_3284.jpeg" x="137" y="244" width="52" height="52" preserveAspectRatio="xMidYMid slice" clip-path="url(#clip-night)" />
+              <circle class="hero-map-ring" cx="163" cy="270" r="26" />
+              <text x="129" y="266" text-anchor="end" class="route-map-city">Dinner and a stay</text>
+              <text x="129" y="282" text-anchor="end" class="route-map-caption">Quality time</text>
+            </g>
+
+            <g class="route-map-stop hero-map-stop">
+              <clipPath id="clip-torc"><circle cx="283" cy="325" r="26" /></clipPath>
+              <image href="images/kerry-IMG_3297.jpeg" x="257" y="299" width="52" height="52" preserveAspectRatio="xMidYMid slice" clip-path="url(#clip-torc)" />
+              <circle class="hero-map-ring" cx="283" cy="325" r="26" />
+              <text x="317" y="321" text-anchor="start" class="route-map-city">Torc Waterfall</text>
+              <text x="317" y="337" text-anchor="start" class="route-map-caption">The next morning</text>
+            </g>
+
+            <g class="route-map-stop hero-map-stop">
+              <circle cx="163" cy="380" r="20" />
+              <text x="163" y="386" text-anchor="middle" class="hero-map-emoji">🚗</text>
+              <text x="131" y="376" text-anchor="end" class="route-map-city">On to Cork</text>
+              <text x="131" y="392" text-anchor="end" class="route-map-caption">Next stop</text>
+            </g>
+          </svg>
+            <ul class="story-chips" aria-label="Story highlights">
+              <li>🚗 Road trip</li>
+              <li>🍳 Tralee breakfast</li>
+              <li>🏖️ Ballybunion</li>
+              <li>🌄 Ring of Kerry</li>
+              <li>🍽️ Dinner and a stay</li>
+              <li>💧 Torc Waterfall</li>
+            </ul>
+          </div>
+
+          <figure class="story-video-frame reveal">
+            <img src="images/kerry-IMG_3271.jpeg" alt="Two friends walking a seaside path under a wide blue sky" />
+          </figure>
         </div>
-        <div id="kerryGalleryGrid" class="morocco-gallery-grid" aria-label="Kerry photo gallery"></div>
       </section>
+
+      <article class="container story-body">
+        <section class="story-chapter reveal">
+          <span class="story-time">10 AM</span>
+          <h2>Dublin to Tralee</h2>
+          <p>We left Dublin by car at 10 in the morning, and our first stop was Tralee for breakfast.</p>
+        </section>
+
+        <section class="story-chapter reveal">
+          <span class="story-time">Afternoon</span>
+          <h2>Ballybunion</h2>
+          <p>From Tralee we went on to Ballybunion: green dunes, a ruined castle on the headland and the beach below.</p>
+          <div class="story-chapter-photos">
+            <a class="gallery-thumb" href="images/kerry-IMG_3191.jpeg" target="_blank" rel="noopener"><img src="images/kerry-IMG_3191.jpeg" alt="Grassy dunes above Ballybunion beach, with a ruined castle on the headland" loading="lazy" style="object-position: 50% 55%;" /></a>
+          </div>
+        </section>
+
+        <section class="story-chapter reveal">
+          <span class="story-time">Evening</span>
+          <h2>The beautiful Ring of Kerry</h2>
+          <p>Then we enjoyed the Ring of Kerry, and it was so beautiful. I didn&#8217;t click many pictures, and honestly, the ones I did take don&#8217;t do it justice.</p>
+          <div class="story-chapter-photos">
+            <a class="gallery-thumb" href="images/kerry-IMG_3267.jpeg" target="_blank" rel="noopener"><img src="images/kerry-IMG_3267.jpeg" alt="A town of white houses by the water below green hills" loading="lazy" style="object-position: 50% 70%;" /></a>
+            <a class="gallery-thumb" href="images/kerry-IMG_3261.jpeg" target="_blank" rel="noopener"><img src="images/kerry-IMG_3261.jpeg" alt="Boats moored in a harbour ringed by hills" loading="lazy" style="object-position: 50% 70%;" /></a>
+            <a class="gallery-thumb" href="images/kerry-IMG_3237.jpeg" target="_blank" rel="noopener"><img src="images/kerry-IMG_3237.jpeg" alt="Colourful shopfronts on a street corner under a cloudy sky" loading="lazy" style="object-position: 50% 75%;" /></a>
+            <a class="gallery-thumb" href="images/kerry-IMG_3273.jpeg" target="_blank" rel="noopener"><img src="images/kerry-IMG_3273.jpeg" alt="A waterside path curving round the bay towards the town" loading="lazy" style="object-position: 50% 75%;" /></a>
+          </div>
+        </section>
+
+        <section class="story-chapter reveal">
+          <span class="story-time">That night</span>
+          <h2>Dinner and a night&#8217;s stay</h2>
+          <p>We had a quality time there: dinner together, and we stayed over for the night.</p>
+          <div class="story-chapter-photos">
+            <a class="gallery-thumb" href="images/kerry-IMG_3284.jpeg" target="_blank" rel="noopener"><img src="images/kerry-IMG_3284.jpeg" alt="A plate of lamb shank on creamy mash at dinner" loading="lazy" style="object-position: 50% 65%;" /></a>
+            <a class="gallery-thumb" href="images/kerry-c5a9283d-1f03-4cff-a7c4-2229ee0dd748.JPG" target="_blank" rel="noopener"><img src="images/kerry-c5a9283d-1f03-4cff-a7c4-2229ee0dd748.JPG" alt="Selfie with friends at the dinner table" loading="lazy" /></a>
+            <a class="gallery-thumb" href="images/kerry-IMG_3290.jpeg" target="_blank" rel="noopener"><img src="images/kerry-IMG_3290.jpeg" alt="A relaxed morning in the lounge by the stone fireplace" loading="lazy" /></a>
+          </div>
+        </section>
+
+        <section class="story-chapter reveal">
+          <span class="story-time">Next morning</span>
+          <h2>Torc Waterfall, then on to Cork</h2>
+          <p>The next day we covered Torc Waterfall before heading on to Cork.</p>
+          <div class="story-chapter-photos">
+            <a class="gallery-thumb" href="images/kerry-IMG_3298.jpeg" target="_blank" rel="noopener"><img src="images/kerry-IMG_3298.jpeg" alt="Stone steps climbing through mossy woods on the waterfall trail" loading="lazy" /></a>
+            <a class="gallery-thumb" href="images/kerry-IMG_3297.jpeg" target="_blank" rel="noopener"><img src="images/kerry-IMG_3297.jpeg" alt="Torc Waterfall tumbling over rocks through the woods" loading="lazy" /></a>
+          </div>
+        </section>
+
+        <blockquote class="story-quote reveal">The pictures don&#8217;t do it justice. You just have to go.</blockquote>
+
+        <div class="story-next reveal">
+          <a href="cork.html" class="social-link">On to Cork &rarr;</a>
+          <a href="ireland.html" class="story-next-secondary">&larr; Back to the Ireland map</a>
+        </div>
+      </article>
     </main>
 
-    <script src="kerry-gallery.js"></script>
     <script>
-      const galleryGrid = document.getElementById('kerryGalleryGrid');
-
-      if (galleryGrid && window.kerryGalleryImages) {
-        window.kerryGalleryImages.forEach((fileName) => {
-          const link = document.createElement('a');
-          link.className = 'gallery-thumb';
-          link.href = `images/${fileName}`;
-          link.target = '_blank';
-          link.rel = 'noopener';
-          link.innerHTML = `<img src="images/${fileName}" alt="Kerry photo ${fileName}" loading="lazy" />`;
-          galleryGrid.appendChild(link);
-        });
-      }
+      (() => {
+        const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+        const items = document.querySelectorAll('.reveal');
+        if (!('IntersectionObserver' in window) || reduceMotion) {
+          items.forEach((el) => el.classList.add('is-visible'));
+          return;
+        }
+        const observer = new IntersectionObserver((entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('is-visible');
+              observer.unobserve(entry.target);
+            }
+          });
+        }, { threshold: 0.15 });
+        items.forEach((el) => observer.observe(el));
+      })();
     </script>
   </body>
 </html>
