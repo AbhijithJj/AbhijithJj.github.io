@@ -8,7 +8,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="styles.css?v=20261029-responsive" />
+    <link rel="stylesheet" href="styles.css?v=20261102-maplinks" />
   </head>
   <body>
     <header class="site-header">
@@ -31,30 +31,30 @@
           <h1>Shots that missed the story.</h1>
           <p>Too good to leave in the camera roll.</p>
 
-          <svg class="route-map-svg memories-map" viewBox="0 0 320 420" role="img" aria-label="Map of the route from Istanbul to Cappadocia to Antalya">
+          <svg class="route-map-svg memories-map" viewBox="0 0 320 420" role="group" aria-label="Map of the route from Istanbul to Cappadocia to Antalya">
             <text x="300" y="30" text-anchor="end" class="route-map-compass">N ↑</text>
             <path class="route-map-line" d="M60,50 Q180,90 230,220 Q170,320 110,380" />
 
-            <g class="route-map-stop">
+            <a class="route-map-stop hero-map-stop" href="turkey-journey.html#istanbul" aria-label="Istanbul: read this part of the story">
               <circle cx="60" cy="50" r="10" />
               <text x="60" y="54" text-anchor="middle" class="route-map-number">1</text>
               <text x="80" y="44" class="route-map-city">Istanbul</text>
               <text x="80" y="62" class="route-map-caption">Touchdown</text>
-            </g>
+            </a>
 
-            <g class="route-map-stop">
+            <a class="route-map-stop hero-map-stop" href="turkey-journey.html#cappadocia" aria-label="Cappadocia: read this part of the story">
               <circle cx="230" cy="220" r="10" />
               <text x="230" y="224" text-anchor="middle" class="route-map-number">2</text>
               <text x="210" y="214" text-anchor="end" class="route-map-city">Cappadocia</text>
               <text x="210" y="232" text-anchor="end" class="route-map-caption">Chimneys &amp; balloons</text>
-            </g>
+            </a>
 
-            <g class="route-map-stop">
+            <a class="route-map-stop hero-map-stop" href="turkey-journey.html#antalya" aria-label="Antalya: read this part of the story">
               <circle cx="110" cy="380" r="10" />
               <text x="110" y="384" text-anchor="middle" class="route-map-number">3</text>
               <text x="130" y="374" class="route-map-city">Antalya</text>
               <text x="130" y="392" class="route-map-caption">Into the blue</text>
-            </g>
+            </a>
           </svg>
 
           <a href="turkey-journey.html" class="social-link">Read the full story &rarr;</a>

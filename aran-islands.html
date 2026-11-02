@@ -8,7 +8,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="styles.css?v=20261029-responsive" />
+    <link rel="stylesheet" href="styles.css?v=20261102-maplinks" />
     <script>document.documentElement.classList.add('js');</script>
   </head>
   <body>
@@ -33,53 +33,53 @@
             <a href="ireland.html" class="county-back-link">&larr; Back to the Ireland map</a>
             <p class="eyebrow">Inis Mór, Aran Islands</p>
             <h1>A day on two wheels on the Aran Islands</h1>
-            <svg class="route-map-svg hero-map" viewBox="0 0 420 390" role="img" aria-label="Map of the day: bus from Dublin to Galway, bus to Rossaveal, ferry to the Aran Islands, cycling to ruins and cliffs, the Wormhole, and back to Dublin by train">
+            <svg class="route-map-svg hero-map" viewBox="0 0 420 390" role="group" aria-label="Map of the day: bus from Dublin to Galway, bus to Rossaveal, ferry to the Aran Islands, cycling to ruins and cliffs, the Wormhole, and back to Dublin by train">
             <path class="route-map-line" d="M163,50 Q283,55 283,110 Q273,165 163,170 Q153,225 283,230 Q273,285 163,290 Q153,345 283,350" />
 
-            <g class="route-map-stop hero-map-stop">
+            <a class="route-map-stop hero-map-stop" href="#bus-bus-ferry" aria-label="Dublin: Bus, bus, ferry">
               <circle cx="163" cy="50" r="20" />
               <text x="163" y="56" text-anchor="middle" class="hero-map-emoji">🚌</text>
               <text x="131" y="46" text-anchor="end" class="route-map-city">Dublin</text>
               <text x="131" y="62" text-anchor="end" class="route-map-caption">Bus to Galway</text>
-            </g>
+            </a>
 
-            <g class="route-map-stop hero-map-stop">
+            <a class="route-map-stop hero-map-stop" href="#bus-bus-ferry" aria-label="Galway: Bus, bus, ferry">
               <circle cx="283" cy="110" r="20" />
               <text x="283" y="116" text-anchor="middle" class="hero-map-emoji">🚌</text>
               <text x="315" y="106" text-anchor="start" class="route-map-city">Galway</text>
               <text x="315" y="122" text-anchor="start" class="route-map-caption">Bus to Rossaveal</text>
-            </g>
+            </a>
 
-            <g class="route-map-stop hero-map-stop">
+            <a class="route-map-stop hero-map-stop" href="#bus-bus-ferry" aria-label="Rossaveal: Bus, bus, ferry">
               <clipPath id="clip-ferry"><circle cx="163" cy="170" r="26" /></clipPath>
               <image href="images/aran-ferry-deck.jpeg" x="137" y="144" width="52" height="52" preserveAspectRatio="xMidYMid slice" clip-path="url(#clip-ferry)" />
               <circle class="hero-map-ring" cx="163" cy="170" r="26" />
               <text x="129" y="166" text-anchor="end" class="route-map-city">Rossaveal</text>
               <text x="129" y="182" text-anchor="end" class="route-map-caption">Ferry to Aran</text>
-            </g>
+            </a>
 
-            <g class="route-map-stop hero-map-stop">
+            <a class="route-map-stop hero-map-stop" href="#two-wheels-and-a-whole-island" aria-label="By bike: Two wheels and a whole island">
               <clipPath id="clip-bike"><circle cx="283" cy="230" r="26" /></clipPath>
               <image href="images/aran-IMG_4543.jpeg" x="257" y="204" width="52" height="52" preserveAspectRatio="xMidYMax slice" clip-path="url(#clip-bike)" />
               <circle class="hero-map-ring" cx="283" cy="230" r="26" />
               <text x="317" y="226" text-anchor="start" class="route-map-city">By bike</text>
               <text x="317" y="242" text-anchor="start" class="route-map-caption">Ruins and cliffs</text>
-            </g>
+            </a>
 
-            <g class="route-map-stop hero-map-stop">
+            <a class="route-map-stop hero-map-stop" href="#the-wormhole" aria-label="The Wormhole: The Wormhole">
               <clipPath id="clip-wormhole"><circle cx="163" cy="290" r="26" /></clipPath>
               <image href="images/aran-IMG_4582.jpeg" x="137" y="264" width="52" height="52" preserveAspectRatio="xMidYMid slice" clip-path="url(#clip-wormhole)" />
               <circle class="hero-map-ring" cx="163" cy="290" r="26" />
               <text x="129" y="286" text-anchor="end" class="route-map-city">The Wormhole</text>
               <text x="129" y="302" text-anchor="end" class="route-map-caption">Cliff jumpers</text>
-            </g>
+            </a>
 
-            <g class="route-map-stop hero-map-stop">
+            <a class="route-map-stop hero-map-stop" href="#racing-the-last-ferry" aria-label="Back to Dublin: Racing the last ferry">
               <circle cx="283" cy="350" r="20" />
               <text x="283" y="356" text-anchor="middle" class="hero-map-emoji">🚆</text>
               <text x="315" y="346" text-anchor="start" class="route-map-city">Back to Dublin</text>
               <text x="315" y="362" text-anchor="start" class="route-map-caption">Last ferry, then train</text>
-            </g>
+            </a>
           </svg>
             <ul class="story-chips" aria-label="Story highlights">
               <li>🚌 Bus to Galway</li>
@@ -99,7 +99,7 @@
       </section>
 
       <article class="container story-body">
-        <section class="story-chapter reveal">
+        <section class="story-chapter reveal" id="bus-bus-ferry">
           <span class="story-time">Getting there</span>
           <h2>Bus, bus, ferry</h2>
           <p>We took the bus from Dublin to Galway, another bus on to Rossaveal, and then the ferry across to the Aran Islands with Aran Island Ferries.</p>
@@ -109,7 +109,7 @@
           </div>
         </section>
 
-        <section class="story-chapter reveal">
+        <section class="story-chapter reveal" id="two-wheels-and-a-whole-island">
           <span class="story-time">On the island</span>
           <h2>Two wheels and a whole island</h2>
           <p>On the island we rented bicycles to roam around. Stone-walled lanes, open sky and the sea never far away.</p>
@@ -148,7 +148,7 @@
           </div>
         </section>
 
-        <section class="story-chapter reveal">
+        <section class="story-chapter reveal" id="the-wormhole">
           <span class="story-time">The highlight</span>
           <h2>The Wormhole</h2>
           <p>Then we went to see the Wormhole, and it was spectacular. Some people were even jumping into it from a height. Scary and eye-pleasing at the same time (that&#8217;s the video at the top).</p>
@@ -158,7 +158,7 @@
           </div>
         </section>
 
-        <section class="story-chapter reveal">
+        <section class="story-chapter reveal" id="racing-the-last-ferry">
           <span class="story-time">Heading home</span>
           <h2>Racing the last ferry</h2>
           <p>The last ferry was in the evening, so with time running out we made it back to the ferry station before 6, then caught the train home to Dublin.</p>

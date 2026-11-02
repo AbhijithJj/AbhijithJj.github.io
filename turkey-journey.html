@@ -8,7 +8,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="styles.css?v=20261029-responsive" />
+    <link rel="stylesheet" href="styles.css?v=20261102-maplinks" />
     <script>document.documentElement.classList.add('js');</script>
   </head>
   <body>
@@ -33,50 +33,50 @@
             <a href="index.html#destinations" class="county-back-link">&larr; Back to destinations</a>
             <p class="eyebrow">Istanbul &rarr; Cappadocia &rarr; Antalya</p>
             <h1>From Istanbul to the bottom of the Mediterranean</h1>
-            <svg class="route-map-svg hero-map" viewBox="0 0 420 340" role="img" aria-label="Map of the route: landing in Istanbul, Cappadocia's Red Tour and balloons, quad bikes in Pigeon Valley, then a boat trip and a scuba dive off Antalya before flying home">
+            <svg class="route-map-svg hero-map" viewBox="0 0 420 340" role="group" aria-label="Map of the route: landing in Istanbul, Cappadocia's Red Tour and balloons, quad bikes in Pigeon Valley, then a boat trip and a scuba dive off Antalya before flying home">
             <text x="410" y="24" text-anchor="end" class="route-map-compass">N ↑</text>
             <path class="hero-map-leg" d="M180,280 Q260,330 320,316" />
             <text x="326" y="320" class="route-map-caption">✈️ home</text>
             <path class="route-map-line" d="M60,96 Q200,80 290,180 Q330,120 370,118 Q380,240 180,280 Q110,250 60,250" />
 
-            <g class="route-map-stop hero-map-stop">
+            <a class="route-map-stop hero-map-stop" href="#istanbul" aria-label="Istanbul: jump to Landing in Istanbul">
               <circle cx="60" cy="96" r="18" />
               <text x="60" y="102" text-anchor="middle" class="hero-map-emoji">🛬</text>
               <text x="60" y="50" text-anchor="middle" class="route-map-city">Istanbul</text>
               <text x="60" y="66" text-anchor="middle" class="route-map-caption">Touchdown</text>
-            </g>
+            </a>
 
-            <g class="route-map-stop hero-map-stop">
+            <a class="route-map-stop hero-map-stop" href="#cappadocia" aria-label="Cappadocia: jump to The Red Tour: fairy chimneys">
               <clipPath id="clip-cappadocia"><circle cx="290" cy="180" r="26" /></clipPath>
               <image href="images/turkey-1000179179.JPG" x="264" y="154" width="52" height="52" preserveAspectRatio="xMidYMid slice" clip-path="url(#clip-cappadocia)" />
               <circle class="hero-map-ring" cx="290" cy="180" r="26" />
               <text x="256" y="176" text-anchor="end" class="route-map-city">Cappadocia</text>
               <text x="256" y="192" text-anchor="end" class="route-map-caption">Red Tour &amp; balloons</text>
-            </g>
+            </a>
 
-            <g class="route-map-stop hero-map-stop">
+            <a class="route-map-stop hero-map-stop" href="#pigeon-valley" aria-label="Pigeon Valley: jump to Quad bikes through Pigeon Valley">
               <clipPath id="clip-pigeon"><circle cx="370" cy="118" r="22" /></clipPath>
               <image href="images/turkey-1000179386.JPG" x="348" y="96" width="44" height="44" preserveAspectRatio="xMidYMid slice" clip-path="url(#clip-pigeon)" />
               <circle class="hero-map-ring" cx="370" cy="118" r="22" />
               <text x="370" y="62" text-anchor="middle" class="route-map-city">Pigeon Valley</text>
               <text x="370" y="78" text-anchor="middle" class="route-map-caption">Quad bikes</text>
-            </g>
+            </a>
 
-            <g class="route-map-stop hero-map-stop">
+            <a class="route-map-stop hero-map-stop" href="#antalya" aria-label="Antalya: jump to Out on the Mediterranean">
               <clipPath id="clip-antalya"><circle cx="180" cy="280" r="26" /></clipPath>
               <image href="images/turkey-1000179759.JPG" x="154" y="254" width="52" height="52" preserveAspectRatio="xMidYMid slice" clip-path="url(#clip-antalya)" />
               <circle class="hero-map-ring" cx="180" cy="280" r="26" />
               <text x="214" y="276" text-anchor="start" class="route-map-city">Antalya</text>
               <text x="214" y="292" text-anchor="start" class="route-map-caption">Boat &amp; lunch</text>
-            </g>
+            </a>
 
-            <g class="route-map-stop hero-map-stop">
+            <a class="route-map-stop hero-map-stop" href="#scuba-dive" aria-label="The dive: jump to The scuba dive">
               <clipPath id="clip-scuba"><circle cx="60" cy="250" r="24" /></clipPath>
               <image href="images/turkey-1000179939.PNG" x="36" y="226" width="48" height="48" preserveAspectRatio="xMidYMid slice" clip-path="url(#clip-scuba)" />
               <circle class="hero-map-ring" cx="60" cy="250" r="24" />
               <text x="60" y="296" text-anchor="middle" class="route-map-city">The dive</text>
               <text x="60" y="312" text-anchor="middle" class="route-map-caption">Into the blue</text>
-            </g>
+            </a>
           </svg>
             <ul class="story-chips" aria-label="Story highlights">
               <li>✈️ Istanbul</li>
@@ -98,13 +98,13 @@
       </section>
 
       <article class="container story-body">
-        <section class="story-chapter reveal">
+        <section class="story-chapter reveal" id="istanbul">
           <span class="story-time">Istanbul</span>
           <h2>Landing in Istanbul</h2>
           <p>The trip began the moment I landed in Istanbul.</p>
         </section>
 
-        <section class="story-chapter reveal">
+        <section class="story-chapter reveal" id="cappadocia">
           <span class="story-time">Cappadocia</span>
           <h2>The Red Tour: fairy chimneys</h2>
           <p>From Istanbul I went to Cappadocia, where I did the Red Tour and explored the fairy chimneys.</p>
@@ -151,7 +151,7 @@
           <p><a href="turkey-story.html" class="story-next-secondary">Read the full balloon sunrise story &rarr;</a></p>
         </section>
 
-        <section class="story-chapter reveal">
+        <section class="story-chapter reveal" id="pigeon-valley">
           <span class="story-time">Pigeon Valley</span>
           <h2>Quad bikes through Pigeon Valley</h2>
           <p>Then came a quad bike ride through Pigeon Valley.</p>
@@ -162,7 +162,7 @@
           </div>
         </section>
 
-        <section class="story-chapter reveal">
+        <section class="story-chapter reveal" id="antalya">
           <span class="story-time">Antalya</span>
           <h2>Out on the Mediterranean</h2>
           <p>Next stop was Antalya, where they showed us around the Mediterranean Sea by boat, and we had lunch out there.</p>
@@ -173,7 +173,7 @@
           </div>
         </section>
 
-        <section class="story-chapter reveal">
+        <section class="story-chapter reveal" id="scuba-dive">
           <span class="story-time">Antalya</span>
           <h2>The scuba dive</h2>
           <p>And then the highlight: a scuba dive in the Mediterranean.</p>

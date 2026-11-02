@@ -1914,3 +1914,31 @@ html.intro-playing {
     font-size: 0.85rem;
   }
 }
+
+/* Clickable map stops: each one jumps to its chapter below the hero */
+a.hero-map-stop {
+  cursor: pointer;
+  outline: none;
+}
+
+a.hero-map-stop:hover circle,
+a.hero-map-stop:focus-visible circle {
+  stroke: var(--accent-soft);
+  stroke-width: 5;
+}
+
+a.hero-map-stop:hover .route-map-city,
+a.hero-map-stop:focus-visible .route-map-city {
+  fill: var(--accent-bright);
+}
+
+/* Keep the jumped-to heading clear of the sticky header */
+.story-chapter[id] {
+  scroll-margin-top: 90px;
+}
+
+@media (max-width: 640px) {
+  .story-chapter[id] {
+    scroll-margin-top: 120px;
+  }
+}

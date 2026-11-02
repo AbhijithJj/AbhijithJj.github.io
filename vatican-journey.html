@@ -8,7 +8,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="styles.css?v=20261029-responsive" />
+    <link rel="stylesheet" href="styles.css?v=20261102-maplinks" />
     <script>document.documentElement.classList.add('js');</script>
   </head>
   <body>
@@ -33,46 +33,46 @@
             <a href="index.html#destinations" class="county-back-link">&larr; Back to destinations</a>
             <p class="eyebrow">Vatican City</p>
             <h1>Time travelling in the smallest country in the world</h1>
-            <svg class="route-map-svg hero-map" viewBox="0 0 420 350" role="img" aria-label="Map of the visit: from Rome to St Peter's Basilica, the Vatican Museums, the Sistine Chapel and the spiral staircase">
+            <svg class="route-map-svg hero-map" viewBox="0 0 420 350" role="group" aria-label="Map of the visit: from Rome to St Peter's Basilica, the Vatican Museums, the Sistine Chapel and the spiral staircase">
             <path class="route-map-line" d="M163,50 Q283,55 283,115 Q273,175 163,180 Q153,240 283,245 Q273,305 163,310" />
 
-            <g class="route-map-stop hero-map-stop">
+            <a class="route-map-stop hero-map-stop" href="#the-smallest-country-in-the-world" aria-label="From Rome: The smallest country in the world">
               <circle cx="163" cy="50" r="20" />
               <text x="163" y="56" text-anchor="middle" class="hero-map-emoji">🏛️</text>
               <text x="131" y="46" text-anchor="end" class="route-map-city">From Rome</text>
               <text x="131" y="62" text-anchor="end" class="route-map-caption">Just next door</text>
-            </g>
+            </a>
 
-            <g class="route-map-stop hero-map-stop">
+            <a class="route-map-stop hero-map-stop" href="#st-peters-from-the-outside" aria-label="St Peter's: St Peter&#8217;s, from the outside">
               <clipPath id="clip-stpeter"><circle cx="283" cy="115" r="26" /></clipPath>
               <image href="images/vatican.jpg" x="257" y="89" width="52" height="52" preserveAspectRatio="xMidYMin slice" clip-path="url(#clip-stpeter)" />
               <circle class="hero-map-ring" cx="283" cy="115" r="26" />
               <text x="317" y="111" text-anchor="start" class="route-map-city">St Peter's</text>
               <text x="317" y="127" text-anchor="start" class="route-map-caption">From the outside</text>
-            </g>
+            </a>
 
-            <g class="route-map-stop hero-map-stop">
+            <a class="route-map-stop hero-map-stop" href="#into-the-vatican-museums" aria-label="Vatican Museums: Into the Vatican Museums">
               <clipPath id="clip-museum"><circle cx="163" cy="180" r="26" /></clipPath>
               <image href="images/vatican-PXL_20241207_160346931.jpg" x="137" y="154" width="52" height="52" preserveAspectRatio="xMidYMid slice" clip-path="url(#clip-museum)" />
               <circle class="hero-map-ring" cx="163" cy="180" r="26" />
               <text x="129" y="176" text-anchor="end" class="route-map-city">Vatican Museums</text>
               <text x="129" y="192" text-anchor="end" class="route-map-caption">A friend's tip</text>
-            </g>
+            </a>
 
-            <g class="route-map-stop hero-map-stop">
+            <a class="route-map-stop hero-map-stop" href="#ceilings-that-stop-you-in-your-tracks" aria-label="Sistine Chapel: Ceilings that stop you in your tracks">
               <circle cx="283" cy="245" r="20" />
               <text x="283" y="251" text-anchor="middle" class="hero-map-emoji">🎨</text>
               <text x="315" y="241" text-anchor="start" class="route-map-city">Sistine Chapel</text>
               <text x="315" y="257" text-anchor="start" class="route-map-caption">Michelangelo</text>
-            </g>
+            </a>
 
-            <g class="route-map-stop hero-map-stop">
+            <a class="route-map-stop hero-map-stop" href="#a-mystic-mysterious-vibe" aria-label="The spiral stairs: A mystic, mysterious vibe">
               <clipPath id="clip-stairs"><circle cx="163" cy="310" r="26" /></clipPath>
               <image href="images/vatican-PXL_20241207_165915185.MP.jpg" x="137" y="284" width="52" height="52" preserveAspectRatio="xMidYMid slice" clip-path="url(#clip-stairs)" />
               <circle class="hero-map-ring" cx="163" cy="310" r="26" />
               <text x="129" y="306" text-anchor="end" class="route-map-city">The spiral stairs</text>
               <text x="129" y="322" text-anchor="end" class="route-map-caption">Looking down</text>
-            </g>
+            </a>
           </svg>
             <ul class="story-chips" aria-label="Story highlights">
               <li>📍 Smallest country</li>
@@ -90,13 +90,13 @@
       </section>
 
       <article class="container story-body">
-        <section class="story-chapter reveal">
+        <section class="story-chapter reveal" id="the-smallest-country-in-the-world">
           <span class="story-time">From Rome</span>
           <h2>The smallest country in the world</h2>
           <p>Since I was already in Rome, exploring the smallest country in the world was easy: it&#8217;s right there in the middle of the city.</p>
         </section>
 
-        <section class="story-chapter reveal">
+        <section class="story-chapter reveal" id="st-peters-from-the-outside">
           <span class="story-time">St Peter's</span>
           <h2>St Peter&#8217;s, from the outside</h2>
           <p>I saw the majestic St Peter&#8217;s Basilica from the outside. I didn&#8217;t have time to go in, and that&#8217;s my biggest regret from the trip.</p>
@@ -105,7 +105,7 @@
           </div>
         </section>
 
-        <section class="story-chapter reveal">
+        <section class="story-chapter reveal" id="into-the-vatican-museums">
           <span class="story-time">A friend's tip</span>
           <h2>Into the Vatican Museums</h2>
           <p>On a friend&#8217;s suggestion I went to the Vatican Museums instead, and it was one of the best decisions I&#8217;ve ever taken. It was surreal. Walking through those halls felt like time travelling.</p>
@@ -116,7 +116,7 @@
           </div>
         </section>
 
-        <section class="story-chapter reveal">
+        <section class="story-chapter reveal" id="ceilings-that-stop-you-in-your-tracks">
           <span class="story-time">Michelangelo</span>
           <h2>Ceilings that stop you in your tracks</h2>
           <p>Michelangelo&#8217;s work in the Sistine Chapel, the Creation of Adam, the architecture all around, and treasures brought from as far as Egypt. Every room had another ceiling worth looking up at.</p>
@@ -127,7 +127,7 @@
           </div>
         </section>
 
-        <section class="story-chapter reveal">
+        <section class="story-chapter reveal" id="a-mystic-mysterious-vibe">
           <span class="story-time">The mood</span>
           <h2>A mystic, mysterious vibe</h2>
           <p>The whole place had a mystic, mysterious vibe. The one piece of music that kept popping into my head was Threnody for Europe by Thomas Bergersen.</p>

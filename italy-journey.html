@@ -8,7 +8,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="styles.css?v=20261029-responsive" />
+    <link rel="stylesheet" href="styles.css?v=20261102-maplinks" />
     <script>document.documentElement.classList.add('js');</script>
   </head>
   <body>
@@ -33,43 +33,43 @@
             <a href="index.html#destinations" class="county-back-link">&larr; Back to destinations</a>
             <p class="eyebrow">Naples &rarr; Rome &rarr; Pisa &rarr; Milan</p>
             <h1>A conference, then the length of Italy</h1>
-            <svg class="route-map-svg hero-map" viewBox="0 0 380 430" role="img" aria-label="Map of the route: landing in Naples for a conference, then Rome, Pisa and Milan">
+            <svg class="route-map-svg hero-map" viewBox="0 0 380 430" role="group" aria-label="Map of the route: landing in Naples for a conference, then Rome, Pisa and Milan">
             <text x="370" y="24" text-anchor="end" class="route-map-compass">N ↑</text>
             <path class="hero-map-leg" d="M350,418 Q320,400 290,378" />
             <text x="340" y="426" text-anchor="end" class="route-map-caption">✈️ landed</text>
             <path class="route-map-line" d="M270,360 Q250,300 200,260 Q130,230 110,165 Q140,90 220,65" />
 
-            <g class="route-map-stop hero-map-stop">
+            <a class="route-map-stop hero-map-stop" href="#landing-for-the-conference" aria-label="Naples: Landing for the conference">
               <clipPath id="clip-naples"><circle cx="270" cy="360" r="26" /></clipPath>
               <image href="images/italy-conference-talk.jpg" x="244" y="334" width="52" height="52" preserveAspectRatio="xMidYMid slice" clip-path="url(#clip-naples)" />
               <circle class="hero-map-ring" cx="270" cy="360" r="26" />
               <text x="234" y="356" text-anchor="end" class="route-map-city">Naples</text>
               <text x="234" y="372" text-anchor="end" class="route-map-caption">The conference</text>
-            </g>
+            </a>
 
-            <g class="route-map-stop hero-map-stop">
+            <a class="route-map-stop hero-map-stop" href="#on-to-rome" aria-label="Rome: On to Rome">
               <clipPath id="clip-rome"><circle cx="200" cy="260" r="26" /></clipPath>
               <image href="images/italy-PXL_20241207_104419782.jpg" x="174" y="234" width="52" height="52" preserveAspectRatio="xMidYMid slice" clip-path="url(#clip-rome)" />
               <circle class="hero-map-ring" cx="200" cy="260" r="26" />
               <text x="236" y="256" text-anchor="start" class="route-map-city">Rome</text>
               <text x="236" y="272" text-anchor="start" class="route-map-caption">The Colosseum</text>
-            </g>
+            </a>
 
-            <g class="route-map-stop hero-map-stop">
+            <a class="route-map-stop hero-map-stop" href="#pisa-by-day-and-by-night" aria-label="Pisa: Pisa, by day and by night">
               <clipPath id="clip-pisa"><circle cx="110" cy="165" r="26" /></clipPath>
               <image href="images/italy-PXL_20241208_150834976.jpg" x="84" y="139" width="52" height="52" preserveAspectRatio="xMidYMid slice" clip-path="url(#clip-pisa)" />
               <circle class="hero-map-ring" cx="110" cy="165" r="26" />
               <text x="146" y="161" text-anchor="start" class="route-map-city">Pisa</text>
               <text x="146" y="177" text-anchor="start" class="route-map-caption">The leaning tower</text>
-            </g>
+            </a>
 
-            <g class="route-map-stop hero-map-stop">
+            <a class="route-map-stop hero-map-stop" href="#ending-in-milan" aria-label="Milan: Ending in Milan">
               <clipPath id="clip-milan"><circle cx="220" cy="65" r="26" /></clipPath>
               <image href="images/italy-PXL_20241209_191348260.MP.jpg" x="194" y="39" width="52" height="52" preserveAspectRatio="xMidYMid slice" clip-path="url(#clip-milan)" />
               <circle class="hero-map-ring" cx="220" cy="65" r="26" />
               <text x="256" y="61" text-anchor="start" class="route-map-city">Milan</text>
               <text x="256" y="77" text-anchor="start" class="route-map-caption">The Duomo</text>
-            </g>
+            </a>
           </svg>
             <ul class="story-chips" aria-label="Story highlights">
               <li>🎤 Conference</li>
@@ -87,7 +87,7 @@
       </section>
 
       <article class="container story-body">
-        <section class="story-chapter reveal">
+        <section class="story-chapter reveal" id="landing-for-the-conference">
           <span class="story-time">Naples</span>
           <h2>Landing for the conference</h2>
           <p>It started when I landed in Naples to attend a conference: badge on, in a marble hall full of talks.</p>
@@ -113,7 +113,7 @@
           </div>
         </section>
 
-        <section class="story-chapter reveal">
+        <section class="story-chapter reveal" id="on-to-rome">
           <span class="story-time">Rome</span>
           <h2>On to Rome</h2>
           <p>Then I moved on to Rome and explored it: the Colosseum inside and out, the Forum&#8217;s ruins and arches, the Pantheon, and the fountains.</p>
@@ -136,7 +136,7 @@
           </div>
         </section>
 
-        <section class="story-chapter reveal">
+        <section class="story-chapter reveal" id="pisa-by-day-and-by-night">
           <span class="story-time">Pisa</span>
           <h2>Pisa, by day and by night</h2>
           <p>After Rome I took the train towards Florence, on my way to Pisa, bunked down in a hostel dorm, and went to see the tower that really does lean.</p>
@@ -152,7 +152,7 @@
           </div>
         </section>
 
-        <section class="story-chapter reveal">
+        <section class="story-chapter reveal" id="ending-in-milan">
           <span class="story-time">Milan</span>
           <h2>Ending in Milan</h2>
           <p>And from Pisa I went on to Milan, where the Duomo was lit up for Christmas. The last stop was Bergamo airport, before my flight to Paris.</p>

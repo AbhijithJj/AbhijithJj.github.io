@@ -8,7 +8,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="styles.css?v=20261029-responsive" />
+    <link rel="stylesheet" href="styles.css?v=20261102-maplinks" />
     <script>document.documentElement.classList.add('js');</script>
   </head>
   <body>
@@ -34,7 +34,7 @@
             <p class="eyebrow">India &middot; so far</p>
             <h1>I&#8217;ve hardly explored India</h1>
             <p class="story-lede">Truth is, I&#8217;ve barely scratched the surface. But here&#8217;s where the camera came along.</p>
-            <svg class="route-map-svg hero-map" viewBox="0 0 380 430" role="img" aria-label="Map of the places I have been in India: Delhi and Agra in the north; Malpe and St Mary's Island, Mysore, Coimbatore, Kodaikanal and Kerala in the south">
+            <svg class="route-map-svg hero-map" viewBox="0 0 380 430" role="group" aria-label="Map of the places I have been in India: Delhi and Agra in the north; Malpe and St Mary's Island, Mysore, Coimbatore, Kodaikanal and Kerala in the south">
             <text x="370" y="24" text-anchor="end" class="route-map-compass">N ↑</text>
             <text x="10" y="24" class="route-map-caption">Up north</text>
             <path class="hero-map-leg" d="M10,160 L370,160" />
@@ -42,61 +42,61 @@
             <path class="route-map-line" d="M170,70 Q215,80 235,125" />
             <path class="route-map-line" d="M60,240 Q110,230 160,240 Q220,250 255,290 Q270,330 265,370 Q205,380 150,360" />
 
-            <g class="route-map-stop hero-map-stop">
+            <a class="route-map-stop hero-map-stop" href="#the-capital-lit-up" aria-label="Delhi: The capital, lit up">
               <clipPath id="clip-delhi"><circle cx="170" cy="70" r="24" /></clipPath>
               <image href="images/india-destination.jpg" x="146" y="46" width="48" height="48" preserveAspectRatio="xMidYMid slice" clip-path="url(#clip-delhi)" />
               <circle class="hero-map-ring" cx="170" cy="70" r="24" />
               <text x="138" y="66" text-anchor="end" class="route-map-city">Delhi</text>
               <text x="138" y="82" text-anchor="end" class="route-map-caption">India Gate at night</text>
-            </g>
+            </a>
 
-            <g class="route-map-stop hero-map-stop">
+            <a class="route-map-stop hero-map-stop" href="#face-to-face-with-the-taj" aria-label="Agra: Face to face with the Taj">
               <clipPath id="clip-agra"><circle cx="235" cy="125" r="24" /></clipPath>
               <image href="images/india-IMG_20221027_170407.jpg" x="211" y="101" width="48" height="48" preserveAspectRatio="xMidYMid slice" clip-path="url(#clip-agra)" />
               <circle class="hero-map-ring" cx="235" cy="125" r="24" />
               <text x="267" y="121" text-anchor="start" class="route-map-city">Agra</text>
               <text x="267" y="137" text-anchor="start" class="route-map-caption">The Taj</text>
-            </g>
+            </a>
 
-            <g class="route-map-stop hero-map-stop">
+            <a class="route-map-stop hero-map-stop" href="#life-jackets-on" aria-label="Malpe &amp; St Mary&#8217;s: Life jackets on">
               <clipPath id="clip-stmarys"><circle cx="60" cy="240" r="24" /></clipPath>
               <image href="images/india-stmarys-rocks.jpeg" x="36" y="216" width="48" height="48" preserveAspectRatio="xMidYMid slice" clip-path="url(#clip-stmarys)" />
               <circle class="hero-map-ring" cx="60" cy="240" r="24" />
               <text x="60" y="284" text-anchor="middle" class="route-map-city">Malpe &amp; St Mary&#8217;s</text>
               <text x="60" y="300" text-anchor="middle" class="route-map-caption">Basalt and the sea</text>
-            </g>
+            </a>
 
-            <g class="route-map-stop hero-map-stop">
+            <a class="route-map-stop hero-map-stop" href="#palace-of-a-thousand-pillars" aria-label="Mysore: Palace of a thousand pillars">
               <clipPath id="clip-mysore"><circle cx="160" cy="240" r="24" /></clipPath>
               <image href="images/india-IMG_20221204_131650.jpg" x="136" y="216" width="48" height="48" preserveAspectRatio="xMidYMid slice" clip-path="url(#clip-mysore)" />
               <circle class="hero-map-ring" cx="160" cy="240" r="24" />
               <text x="160" y="192" text-anchor="middle" class="route-map-city">Mysore</text>
               <text x="160" y="208" text-anchor="middle" class="route-map-caption">The palace</text>
-            </g>
+            </a>
 
-            <g class="route-map-stop hero-map-stop">
+            <a class="route-map-stop hero-map-stop" href="#under-adiyogi" aria-label="Coimbatore: Under Adiyogi">
               <clipPath id="clip-coimbatore"><circle cx="255" cy="290" r="24" /></clipPath>
               <image href="images/india-IMG_20210317_172457.jpg" x="231" y="266" width="48" height="48" preserveAspectRatio="xMidYMid slice" clip-path="url(#clip-coimbatore)" />
               <circle class="hero-map-ring" cx="255" cy="290" r="24" />
               <text x="287" y="286" text-anchor="start" class="route-map-city">Coimbatore</text>
               <text x="287" y="302" text-anchor="start" class="route-map-caption">Adiyogi</text>
-            </g>
+            </a>
 
-            <g class="route-map-stop hero-map-stop">
+            <a class="route-map-stop hero-map-stop" href="#keralas-hills" aria-label="Kerala: Kerala&#8217;s hills">
               <clipPath id="clip-kerala"><circle cx="150" cy="360" r="24" /></clipPath>
               <image href="images/india-tile.jpg" x="126" y="336" width="48" height="48" preserveAspectRatio="xMidYMid slice" clip-path="url(#clip-kerala)" />
               <circle class="hero-map-ring" cx="150" cy="360" r="24" />
               <text x="150" y="404" text-anchor="middle" class="route-map-city">Kerala</text>
               <text x="150" y="420" text-anchor="middle" class="route-map-caption">Munnar &amp; the hills</text>
-            </g>
+            </a>
 
-            <g class="route-map-stop hero-map-stop">
+            <a class="route-map-stop hero-map-stop" href="#football-above-the-clouds" aria-label="Kodaikanal: Football above the clouds">
               <clipPath id="clip-kodai"><circle cx="265" cy="370" r="24" /></clipPath>
               <image href="images/india-kodaikanal.jpeg" x="241" y="346" width="48" height="48" preserveAspectRatio="xMidYMid slice" clip-path="url(#clip-kodai)" />
               <circle class="hero-map-ring" cx="265" cy="370" r="24" />
               <text x="265" y="414" text-anchor="middle" class="route-map-city">Kodaikanal</text>
               <text x="265" y="430" text-anchor="middle" class="route-map-caption">Football in the clouds</text>
-            </g>
+            </a>
           </svg>
             <ul class="story-chips" aria-label="Places I have been">
               <li>🏙️ Delhi</li>
@@ -122,7 +122,7 @@
       </section>
 
       <article class="container story-body">
-        <section class="story-chapter reveal">
+        <section class="story-chapter reveal" id="the-capital-lit-up">
           <span class="story-time">Delhi</span>
           <h2>The capital, lit up</h2>
           <p>Delhi gave me India Gate glowing after dark, the Qutub Minar, the Red Fort and a handful of old tombs and temples in between.</p>
@@ -139,7 +139,7 @@
           </div>
         </section>
 
-        <section class="story-chapter reveal">
+        <section class="story-chapter reveal" id="face-to-face-with-the-taj">
           <span class="story-time">Agra</span>
           <h2>Face to face with the Taj</h2>
           <p>Agra meant the Taj Mahal, and the red sandstone walls and arches around it.</p>
@@ -152,7 +152,7 @@
           </div>
         </section>
 
-        <section class="story-chapter reveal">
+        <section class="story-chapter reveal" id="palace-of-a-thousand-pillars">
           <span class="story-time">Mysore</span>
           <h2>Palace of a thousand pillars</h2>
           <p>In Mysore it was all about the palace: gold, glass and painted arches from end to end.</p>
@@ -164,7 +164,7 @@
           </div>
         </section>
 
-        <section class="story-chapter reveal">
+        <section class="story-chapter reveal" id="life-jackets-on">
           <span class="story-time">Malpe &amp; St Mary&#8217;s Island</span>
           <h2>Life jackets on</h2>
           <p>On the Karnataka coast near Udupi: Malpe, and St Mary&#8217;s Island with its strange hexagonal basalt rocks.</p>
@@ -175,7 +175,7 @@
           </div>
         </section>
 
-        <section class="story-chapter reveal">
+        <section class="story-chapter reveal" id="under-adiyogi">
           <span class="story-time">Coimbatore</span>
           <h2>Under Adiyogi</h2>
           <p>Coimbatore, and the giant Adiyogi statue.</p>
@@ -185,7 +185,7 @@
           </div>
         </section>
 
-        <section class="story-chapter reveal">
+        <section class="story-chapter reveal" id="football-above-the-clouds">
           <span class="story-time">Kodaikanal</span>
           <h2>Football above the clouds</h2>
           <p>Up in Kodaikanal with the gang: a kickabout on a hilltop, the valleys and mist spread out below.</p>
@@ -195,7 +195,7 @@
           </div>
         </section>
 
-        <section class="story-chapter reveal">
+        <section class="story-chapter reveal" id="keralas-hills">
           <span class="story-time">Munnar &middot; Kuttikkanam &middot; Wayanad &middot; Ranipuram</span>
           <h2>Kerala&#8217;s hills</h2>
           <p>Then the green part of the map: Munnar, Kuttikkanam, Wayanad and Ranipuram. Bikes, tea slopes, forest swings, waterfalls and cliff edges.</p>

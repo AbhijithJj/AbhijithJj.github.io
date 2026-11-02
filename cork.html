@@ -8,7 +8,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="styles.css?v=20261029-responsive" />
+    <link rel="stylesheet" href="styles.css?v=20261102-maplinks" />
     <script>document.documentElement.classList.add('js');</script>
   </head>
   <body>
@@ -33,39 +33,39 @@
             <a href="ireland.html" class="county-back-link">&larr; Back to the Ireland map</a>
             <p class="eyebrow">County Cork</p>
             <h1>Cork city, then bucket-list Cobh</h1>
-            <svg class="route-map-svg hero-map" viewBox="0 0 420 270" role="img" aria-label="Map of the afternoon: from Kerry to Cork city for lunch, then Cobh's cathedral and the Deck of Cards houses">
+            <svg class="route-map-svg hero-map" viewBox="0 0 420 270" role="group" aria-label="Map of the afternoon: from Kerry to Cork city for lunch, then Cobh's cathedral and the Deck of Cards houses">
             <path class="route-map-line" d="M163,50 Q283,55 283,110 Q273,165 163,170 Q153,225 283,230" />
 
-            <g class="route-map-stop hero-map-stop">
+            <a class="route-map-stop hero-map-stop" href="#a-short-stint-in-cork" aria-label="From Kerry: A short stint in Cork">
               <circle cx="163" cy="50" r="20" />
               <text x="163" y="56" text-anchor="middle" class="hero-map-emoji">🚗</text>
               <text x="131" y="46" text-anchor="end" class="route-map-city">From Kerry</text>
               <text x="131" y="62" text-anchor="end" class="route-map-caption">After Torc</text>
-            </g>
+            </a>
 
-            <g class="route-map-stop hero-map-stop">
+            <a class="route-map-stop hero-map-stop" href="#a-short-stint-in-cork" aria-label="Cork city: A short stint in Cork">
               <clipPath id="clip-city"><circle cx="283" cy="110" r="26" /></clipPath>
               <image href="images/cork-IMG_3308.jpeg" x="257" y="84" width="52" height="52" preserveAspectRatio="xMidYMid slice" clip-path="url(#clip-city)" />
               <circle class="hero-map-ring" cx="283" cy="110" r="26" />
               <text x="317" y="106" text-anchor="start" class="route-map-city">Cork city</text>
               <text x="317" y="122" text-anchor="start" class="route-map-caption">A wander and lunch</text>
-            </g>
+            </a>
 
-            <g class="route-map-stop hero-map-stop">
+            <a class="route-map-stop hero-map-stop" href="#a-bucket-list-stop" aria-label="Cobh Cathedral: A bucket-list stop">
               <clipPath id="clip-cathedral"><circle cx="163" cy="170" r="26" /></clipPath>
               <image href="images/cork-IMG_3346.jpeg" x="137" y="144" width="52" height="52" preserveAspectRatio="xMidYMin slice" clip-path="url(#clip-cathedral)" />
               <circle class="hero-map-ring" cx="163" cy="170" r="26" />
               <text x="129" y="166" text-anchor="end" class="route-map-city">Cobh Cathedral</text>
               <text x="129" y="182" text-anchor="end" class="route-map-caption">Surreal inside</text>
-            </g>
+            </a>
 
-            <g class="route-map-stop hero-map-stop">
+            <a class="route-map-stop hero-map-stop" href="#the-deck-of-cards" aria-label="Deck of Cards: The Deck of Cards">
               <clipPath id="clip-deck"><circle cx="283" cy="230" r="26" /></clipPath>
               <image href="images/cork-IMG_3316.jpeg" x="257" y="204" width="52" height="52" preserveAspectRatio="xMidYMid slice" clip-path="url(#clip-deck)" />
               <circle class="hero-map-ring" cx="283" cy="230" r="26" />
               <text x="317" y="226" text-anchor="start" class="route-map-city">Deck of Cards</text>
               <text x="317" y="242" text-anchor="start" class="route-map-caption">The best view</text>
-            </g>
+            </a>
           </svg>
             <ul class="story-chips" aria-label="Story highlights">
               <li>🏙️ Cork city</li>
@@ -83,7 +83,7 @@
       </section>
 
       <article class="container story-body">
-        <section class="story-chapter reveal">
+        <section class="story-chapter reveal" id="a-short-stint-in-cork">
           <span class="story-time">Afternoon</span>
           <h2>A short stint in Cork</h2>
           <p>Cork was a short stint. We just roamed around the city centre and had our lunch.</p>
@@ -95,7 +95,7 @@
           </div>
         </section>
 
-        <section class="story-chapter reveal">
+        <section class="story-chapter reveal" id="a-bucket-list-stop">
           <span class="story-time">Cobh</span>
           <h2>A bucket-list stop</h2>
           <p>Then we went to Cobh, which had been on my Irish bucket list for a long time. First we visited the huge cathedral, and the interior was surreal.</p>
@@ -104,7 +104,7 @@
           </div>
         </section>
 
-        <section class="story-chapter reveal">
+        <section class="story-chapter reveal" id="the-deck-of-cards">
           <span class="story-time">The view</span>
           <h2>The Deck of Cards</h2>
           <p>Then we went looking for the best view of the Deck of Cards, the row of colourful houses stacked down the steep hill.</p>

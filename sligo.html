@@ -8,7 +8,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="styles.css?v=20261029-responsive" />
+    <link rel="stylesheet" href="styles.css?v=20261102-maplinks" />
     <script>document.documentElement.classList.add('js');</script>
   </head>
   <body>
@@ -33,39 +33,39 @@
             <a href="ireland.html" class="county-back-link">&larr; Back to the Ireland map</a>
             <p class="eyebrow">County Sligo, Ireland</p>
             <h1>Three trips to Sligo</h1>
-            <svg class="route-map-svg hero-map" viewBox="0 0 420 285" role="img" aria-label="Map of three trips from Dublin: Mullaghmore and Classiebawn Castle, the Keash Caves, and the Gleniff Horseshoe">
+            <svg class="route-map-svg hero-map" viewBox="0 0 420 285" role="group" aria-label="Map of three trips from Dublin: Mullaghmore and Classiebawn Castle, the Keash Caves, and the Gleniff Horseshoe">
             <path class="route-map-line" d="M163,50 Q283,55 283,115 Q273,175 163,180 Q153,240 283,245" />
 
-            <g class="route-map-stop hero-map-stop">
+            <a class="route-map-stop hero-map-stop" href="#train-bus-and-a-castle-by-the-sea" aria-label="From Dublin: Train, bus, and a castle by the sea">
               <circle cx="163" cy="50" r="20" />
               <text x="163" y="56" text-anchor="middle" class="hero-map-emoji">🚆</text>
               <text x="131" y="46" text-anchor="end" class="route-map-city">From Dublin</text>
               <text x="131" y="62" text-anchor="end" class="route-map-caption">Train to Sligo</text>
-            </g>
+            </a>
 
-            <g class="route-map-stop hero-map-stop">
+            <a class="route-map-stop hero-map-stop" href="#train-bus-and-a-castle-by-the-sea" aria-label="Classiebawn: Train, bus, and a castle by the sea">
               <clipPath id="clip-classiebawn"><circle cx="283" cy="115" r="26" /></clipPath>
               <image href="images/sligo-IMG_8891.jpeg" x="257" y="89" width="52" height="52" preserveAspectRatio="xMidYMid slice" clip-path="url(#clip-classiebawn)" />
               <circle class="hero-map-ring" cx="283" cy="115" r="26" />
               <text x="317" y="111" text-anchor="start" class="route-map-city">Classiebawn</text>
               <text x="317" y="127" text-anchor="start" class="route-map-caption">Trip 1</text>
-            </g>
+            </a>
 
-            <g class="route-map-stop hero-map-stop">
+            <a class="route-map-stop hero-map-stop" href="#off-the-train-early-for-keash" aria-label="Keash Caves: Off the train early for Keash">
               <clipPath id="clip-keash"><circle cx="163" cy="180" r="26" /></clipPath>
               <image href="images/sligo-IMG_0796.jpeg" x="137" y="154" width="52" height="52" preserveAspectRatio="xMidYMid slice" clip-path="url(#clip-keash)" />
               <circle class="hero-map-ring" cx="163" cy="180" r="26" />
               <text x="129" y="176" text-anchor="end" class="route-map-city">Keash Caves</text>
               <text x="129" y="192" text-anchor="end" class="route-map-caption">Trip 2</text>
-            </g>
+            </a>
 
-            <g class="route-map-stop hero-map-stop">
+            <a class="route-map-stop hero-map-stop" href="#gleniff-horseshoe-and-the-devils-chimney" aria-label="Gleniff: Gleniff Horseshoe and the Devil&#8217;s Chimney">
               <clipPath id="clip-gleniff"><circle cx="283" cy="245" r="26" /></clipPath>
               <image href="images/sligo-IMG_5342.jpeg" x="257" y="219" width="52" height="52" preserveAspectRatio="xMidYMid slice" clip-path="url(#clip-gleniff)" />
               <circle class="hero-map-ring" cx="283" cy="245" r="26" />
               <text x="317" y="241" text-anchor="start" class="route-map-city">Gleniff</text>
               <text x="317" y="257" text-anchor="start" class="route-map-caption">Trip 3</text>
-            </g>
+            </a>
           </svg>
             <ul class="story-chips" aria-label="Story highlights">
               <li>🚆 Dublin to Sligo</li>
@@ -85,7 +85,7 @@
       </section>
 
       <article class="container story-body">
-        <section class="story-chapter reveal">
+        <section class="story-chapter reveal" id="train-bus-and-a-castle-by-the-sea">
           <span class="story-time">Trip one</span>
           <h2>Train, bus, and a castle by the sea</h2>
           <p>I&#8217;ve been to Sligo three times. The first time, I took the train from Dublin to Sligo, then a bus to Mullaghmore, and walked towards the beautiful Classiebawn Castle, with Benbulben all around.</p>
@@ -107,7 +107,7 @@
           </div>
         </section>
 
-        <section class="story-chapter reveal">
+        <section class="story-chapter reveal" id="off-the-train-early-for-keash">
           <span class="story-time">Trip two</span>
           <h2>Off the train early for Keash</h2>
           <p>Next we went to the Keash Caves. We got off the train at the stop before Sligo and walked towards the caves. There wasn&#8217;t any footpath that way, but we made it.</p>
@@ -132,7 +132,7 @@
           </div>
         </section>
 
-        <section class="story-chapter reveal">
+        <section class="story-chapter reveal" id="gleniff-horseshoe-and-the-devils-chimney">
           <span class="story-time">Trip three</span>
           <h2>Gleniff Horseshoe and the Devil&#8217;s Chimney</h2>
           <p>On the third trip we covered the Gleniff Horseshoe and the Devil&#8217;s Chimney.</p>

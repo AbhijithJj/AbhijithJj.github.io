@@ -8,7 +8,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="styles.css?v=20261029-responsive" />
+    <link rel="stylesheet" href="styles.css?v=20261102-maplinks" />
   </head>
   <body>
     <header class="site-header">
@@ -40,37 +40,37 @@
           <h2>South to north, four stops along the way</h2>
           <p>Naples, Rome, Pisa, then Milan — a slow climb up the country, city by city.</p>
         </div>
-        <svg class="route-map-svg" viewBox="0 0 320 420" role="img" aria-label="Map of the route from Naples to Rome to Pisa to Milan">
+        <svg class="route-map-svg" viewBox="0 0 320 420" role="group" aria-label="Map of the route from Naples to Rome to Pisa to Milan">
           <text x="300" y="30" text-anchor="end" class="route-map-compass">N ↑</text>
           <path class="route-map-line" d="M50,380 Q130,340 130,290 Q40,230 70,170 Q150,130 150,50" />
 
-          <g class="route-map-stop">
+          <a class="route-map-stop hero-map-stop" href="italy-journey.html#landing-for-the-conference" aria-label="Naples: read this part of the story">
             <circle cx="50" cy="380" r="10" />
             <text x="50" y="384" text-anchor="middle" class="route-map-number">1</text>
             <text x="70" y="378" class="route-map-city">Naples</text>
             <text x="70" y="396" class="route-map-caption">Where the trip began, by the bay</text>
-          </g>
+          </a>
 
-          <g class="route-map-stop">
+          <a class="route-map-stop hero-map-stop" href="italy-journey.html#on-to-rome" aria-label="Rome: read this part of the story">
             <circle cx="130" cy="290" r="10" />
             <text x="130" y="294" text-anchor="middle" class="route-map-number">2</text>
             <text x="150" y="284" class="route-map-city">Rome</text>
             <text x="150" y="302" class="route-map-caption">Ancient streets and eternal ruins</text>
-          </g>
+          </a>
 
-          <g class="route-map-stop">
+          <a class="route-map-stop hero-map-stop" href="italy-journey.html#pisa-by-day-and-by-night" aria-label="Pisa: read this part of the story">
             <circle cx="70" cy="170" r="10" />
             <text x="70" y="174" text-anchor="middle" class="route-map-number">3</text>
             <text x="90" y="164" class="route-map-city">Pisa</text>
             <text x="90" y="182" class="route-map-caption">A quick detour to see it lean</text>
-          </g>
+          </a>
 
-          <g class="route-map-stop">
+          <a class="route-map-stop hero-map-stop" href="italy-journey.html#ending-in-milan" aria-label="Milan: read this part of the story">
             <circle cx="150" cy="50" r="10" />
             <text x="150" y="54" text-anchor="middle" class="route-map-number">4</text>
             <text x="170" y="44" class="route-map-city">Milan</text>
             <text x="170" y="62" class="route-map-caption">The finish line up north</text>
-          </g>
+          </a>
         </svg>
       </section>
     </main>
